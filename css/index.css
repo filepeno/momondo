@@ -1,0 +1,181 @@
+:root {
+  --clr-main: #f3f0f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+input {
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--clr-main);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* input:focus-visible,
+input:active {
+  background-color: var(--clr-main);
+} */
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #210340;
+  overflow-y: hidden;
+}
+
+header {
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(33, 3, 58);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: rgb(19, 0, 38);
+  color: rgb(214, 214, 214);
+  padding: 4rem 1rem;
+}
+
+#search-flights {
+  width: 100%;
+  background-color: rgba(33, 3, 58, 0.5);
+  padding: 2rem 1rem;
+}
+
+#search-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(0, 149, 204);
+}
+
+#from-to-wrapper {
+  width: 50%;
+}
+
+#from-wrapper {
+  position: relative;
+}
+
+#results-from {
+  display: none;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  width: 20rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+#results-from.active {
+  display: block;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.city-img {
+  max-width: 50px;
+  border-radius: 1rem;
+}
+
+.city-name {
+  font-weight: bold;
+}
+
+#bottom-wrapper {
+  width: 100%;
+  display: flex;
+  background-color: rgba(33, 3, 58, 0.5);
+}
+
+#filter {
+  height: 10rem;
+  width: 30%;
+  background-color: rgba(33, 3, 58, 0.5);
+}
+
+#results {
+  height: 10rem;
+  width: 70%;
+  background-color: rgba(33, 3, 58, 0.3);
+}
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/*# sourceMappingURL=index.css.map */

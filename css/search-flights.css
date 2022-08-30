@@ -1,0 +1,69 @@
+#search-flights {
+  width: 100%;
+  background-color: rgba(33, 3, 58, 0.5);
+  padding: 2rem 1rem;
+}
+
+#search-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(0, 149, 204);
+}
+
+#from-to-wrapper {
+  width: 50%;
+}
+
+#from-wrapper {
+  position: relative;
+}
+
+#results-from {
+  display: none;
+  margin-top: 0.5rem;
+  position: absolute;
+  z-index: 1;
+  width: 20rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+#results-from.active {
+  display: block;
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.city-img {
+  max-width: 50px;
+  border-radius: 1rem;
+}
+
+.city-name {
+  font-weight: bold;
+}
+
+#bottom-wrapper {
+  width: 100%;
+  display: flex;
+  background-color: rgba(33, 3, 58, 0.5);
+}
+
+#filter {
+  height: 10rem;
+  width: 30%;
+  background-color: rgba(33, 3, 58, 0.5);
+}
+
+#results {
+  height: 10rem;
+  width: 70%;
+  background-color: rgba(33, 3, 58, 0.3);
+}
+
+/*# sourceMappingURL=search-flights.css.map */
