@@ -1,64 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 19 |   background-color: $clr-main;
+ *    |                     ^^^^^^^^^
+ *    '
+ *   sass\general.scss 19:21  root stylesheet */
 
-h2 {
-  font-size: 1rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 19 \2502    background-color: $clr-main;\d\a    \2502                      ^^^^^^^^^\a    \2575 \a   sass\\general.scss 19:21  root stylesheet";
 }
-
-input {
-  height: 2.5rem;
-  padding-left: 0.5rem;
-  outline: none;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: var(--clr-main);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* input:focus-visible,
-input:active {
-  background-color: var(--clr-main);
-} */
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #210340;
-  overflow-y: hidden;
-}
-
-header {
-  width: 100%;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(33, 3, 58);
-}
-
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.logo {
-  max-width: 100%;
-  height: auto;
-}
-
-footer {
-  margin-top: auto;
-  width: 100%;
-  background-color: rgb(19, 0, 38);
-  color: rgb(214, 214, 214);
-  padding: 4rem 1rem;
-}
-
-/*# sourceMappingURL=general.css.map */
