@@ -24,17 +24,18 @@
         <div id="search-flights">
             <form id="search-form">
                 <div id="from-to-wrapper">
-                    <div id="from-wrapper">
-                        <input id="input-from" type="text" placeholder="From?" onfocus="toggle_results_from()" oninput="toggle_results_from()" onblur="hide_results_from()">
-                        <div id="results-from">
+                    <div class="search-input-wrapper">
+                        <input id="input-from" class="location-input" type="text" placeholder="From?">
+                        <div class="suggestions-wrapper">
 
 
 
                         </div>
                     </div>
-                    <div id="to-wrapper">
-                        <input id="input-to" type="text" placeholder="To?" onfocus="toggle_results_to()" oninput="toggle_results_to()" onblur="hide_results_to()">
-                        <div id="results-to">
+                    <button>Swap</button>
+                    <div class="search-input-wrapper">
+                        <input id="input-to" class="location-input" type="text" placeholder="To?">
+                        <div class="suggestions-wrapper">
 
 
 

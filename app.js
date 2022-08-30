@@ -1,28 +1,36 @@
-function toggle_results_from() {
-  const input = document.querySelector("#input-from").value;
+function trackInput() {
+  document.querySelectorAll(".location-input").forEach((element) => {
+    element.addEventListener("input", (e) => toggle_results_from(e));
+    element.addEventListener("focus", (e) => toggle_results_from(e));
+    element.addEventListener("blur", (e) => hide_suggestions(e));
+  });
+}
+
+async function toggle_results_from(e) {
+  console.log(e.target.nextElementSibling);
+  const input = e.target.value;
+  const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
-    get_cities_from();
-    document.querySelector("#results-from").classList.add("active");
+    const data = await get_cities_from();
+    console.log(data);
+    displayCities(data, suggestionsWrapper);
+    suggestionsWrapper.classList.add("active");
   } else {
-    hide_results_from();
+    hide_suggestions(e);
   }
 }
 
-function hide_results_from() {
-  console.log("hide");
-  const resultsFrom = document.querySelector("#results-from");
-  resultsFrom.classList.remove("active");
+function hide_suggestions(e) {
+  e.target.nextElementSibling.classList.remove("active");
 }
 
 async function get_cities_from() {
   const resp = await fetch("api-get-cities-from");
   const data = await resp.json();
-
-  displayCities(data);
+  return data;
 }
 
-function displayCities(data) {
-  const parent = document.querySelector("#results-from");
+function displayCities(data, parent) {
   parent.innerHTML = "";
 
   data.forEach((city) => {
@@ -37,3 +45,5 @@ function displayCities(data) {
     parent.insertAdjacentHTML("beforeEnd", city_html);
   });
 }
+
+trackInput();
