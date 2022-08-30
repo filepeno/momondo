@@ -1,16 +1,17 @@
 function toggle_results_from() {
-  const resultsFrom = document.querySelector("#results-from");
   const input = document.querySelector("#input-from").value;
   if (input.length > 0) {
     get_cities_from();
     document.querySelector("#results-from").classList.add("active");
   } else {
-    resultsFrom.classList.remove("active");
+    hide_results_from();
   }
 }
 
 function hide_results_from() {
-  document.querySelector("#results-from").classList.remove("active");
+  console.log("hide");
+  const resultsFrom = document.querySelector("#results-from");
+  resultsFrom.classList.remove("active");
 }
 
 async function get_cities_from() {
