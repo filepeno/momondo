@@ -34,21 +34,21 @@ function hide_suggestions(e) {
 }
 
 async function get_cities_from() {
-  const resp = await fetch("api-get-cities-from");
+  const resp = await fetch("api-get-airports");
   const data = await resp.json();
+  console.log(data);
   return data;
 }
 
 function display_cities(data, parent) {
   parent.innerHTML = "";
 
-  data.forEach((city) => {
+  data.forEach((airport) => {
     const city_html = `<div class="city">
-                    <img class="city-img" src="assets/${city.city_image}" alt="Image of city" width="100px">
+                    <img class="city-img" src="assets/${airport.image}" alt="Image of city" width="100px">
                     <div class="city-data-wrapper">
-                        <h2 class="city-name">${city.city_name ?? "UPS..."}</h2>
-                        <p>${city.city_airport ?? "ups.."}</p>
-                        <p>Population: ${city.city_population ?? "ups.."}</p>
+                        <h2 class="city-name">${airport.city ?? "UPS..."}</h2>
+                        <p>${airport.name ?? "ups.."}</p>
                     </div>
                 </div>`;
     parent.insertAdjacentHTML("beforeEnd", city_html);
