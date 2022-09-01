@@ -7,17 +7,26 @@ function trackInput() {
 }
 
 async function toggle_results_from(e) {
-  console.log(e.target.nextElementSibling);
   const input = e.target.value;
   const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
     const data = await get_cities_from();
-    console.log(data);
-    displayCities(data, suggestionsWrapper);
-    suggestionsWrapper.classList.add("active");
+    display_cities(data, suggestionsWrapper);
+    display_suggestions(suggestionsWrapper);
   } else {
     hide_suggestions(e);
   }
+}
+
+function display_suggestions(el) {
+  hide_all_suggestions();
+  el.classList.add("active");
+}
+
+function hide_all_suggestions() {
+  document.querySelectorAll(".suggestions-wrapper").forEach((element) => {
+    element.classList.remove("active");
+  });
 }
 
 function hide_suggestions(e) {
@@ -30,12 +39,12 @@ async function get_cities_from() {
   return data;
 }
 
-function displayCities(data, parent) {
+function display_cities(data, parent) {
   parent.innerHTML = "";
 
   data.forEach((city) => {
     const city_html = `<div class="city">
-                    <img class="city-img" src="${city.city_image}" alt="Image of city" width="100px">
+                    <img class="city-img" src="assets/${city.city_image}" alt="Image of city" width="100px">
                     <div class="city-data-wrapper">
                         <h2 class="city-name">${city.city_name ?? "UPS..."}</h2>
                         <p>${city.city_airport ?? "ups.."}</p>

@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <img class="logo" src="momondo-logo.png" alt="Momondo logo" width="200">
+        <img class="logo" src="assets/momondo-logo.png" alt="Momondo logo" width="200">
         <div>
             <a href="trips">Trips</a>
             <a href="login">Log in</a>
