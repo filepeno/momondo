@@ -1,9 +1,18 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  //font-size: 1.1rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $clr-mid-blue;
+  color: $clr-main;
+  overflow-y: hidden;
+  font-family: $font-medium;
 }
 
 h2 {
@@ -24,13 +33,6 @@ img {
   height: auto;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #210340;
-  overflow-y: hidden;
-}
-
 header {
   width: 100%;
   padding: 0 1rem;
@@ -38,7 +40,7 @@ header {
   justify-content: space-between;
   align-items: center;
   //height: 5rem;
-  background-color: rgba(33, 3, 58, 1);
+  background-color: $clr-mid-blue;
 }
 
 main {
@@ -54,7 +56,6 @@ main {
 footer {
   margin-top: auto;
   width: 100%;
-  background-color: rgba(19, 0, 38, 1);
-  color: rgb(214, 214, 214);
+  background-color: $clr-dark-blue;
   padding: 4rem 1rem;
 }
