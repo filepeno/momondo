@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Momondo</title>
     <link rel="stylesheet" href="css/index.css">
 
 </head>
 
 <body>
     <header>
-        <img class="logo" src="assets/momondo-logo.png" alt="Momondo logo" width="200">
+        <img class="logo" src="assets/img/momondo-logo.png" alt="Momondo logo" width="200">
         <div>
             <a href="trips">Trips</a>
             <a href="login">Log in</a>
@@ -42,16 +42,20 @@
                         </div>
                     </div>
                 </div>
+                <button id="search-button">Seach</button>
             </form>
 
         </div>
 
         <div id="bottom-wrapper">
             <div id="filter">
-                Left
+                FILTER
+            </div>
+            <div id="price-diagram">
+                PRICE DIAGRAM
             </div>
             <div id="results">
-                RIght
+                RESULTS
             </div>
         </div>
     </main>

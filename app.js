@@ -45,7 +45,7 @@ function display_cities(data, parent) {
 
   data.forEach((airport) => {
     const city_html = `<div class="city">
-                    <img class="city-img" src="assets/${airport.image}" alt="Image of city" width="100px">
+                    <img class="city-img" src="assets/img/${airport.image}" alt="Image of city" width="100px">
                     <div class="city-data-wrapper">
                         <h2 class="city-name">${airport.city ?? "UPS..."}</h2>
                         <p>${airport.name ?? "ups.."}</p>
