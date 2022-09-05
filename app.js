@@ -1,16 +1,16 @@
 function trackInput() {
   document.querySelectorAll(".location-input").forEach((element) => {
-    element.addEventListener("input", (e) => toggle_results_from(e));
-    element.addEventListener("focus", (e) => toggle_results_from(e));
+    element.addEventListener("input", (e) => get_input(e));
+    element.addEventListener("focus", (e) => get_input(e));
     element.addEventListener("blur", (e) => hide_suggestions(e));
   });
 }
 
-async function toggle_results_from(e) {
+async function get_input(e) {
   const input = e.target.value;
   const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
-    const data = await get_cities_from();
+    const data = await get_cities();
     display_cities(data, suggestionsWrapper);
     display_suggestions(suggestionsWrapper);
   } else {
@@ -33,7 +33,7 @@ function hide_suggestions(e) {
   e.target.nextElementSibling.classList.remove("active");
 }
 
-async function get_cities_from() {
+async function get_cities() {
   const resp = await fetch("api-get-airports");
   const data = await resp.json();
   console.log(data);
