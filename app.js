@@ -7,11 +7,11 @@ function trackInput() {
 }
 
 async function get_input(e) {
-  const input = e.target.value;
+  const input = e.target.value.toLowerCase();
   const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
     const data = await get_cities(input);
-    display_cities(data, suggestionsWrapper);
+    display_cities(data, suggestionsWrapper, input);
     display_suggestions(suggestionsWrapper);
   } else {
     hide_suggestions(e);
@@ -36,14 +36,16 @@ function hide_suggestions(e) {
 async function get_cities(input) {
   const resp = await fetch("api-get-airports");
   const data = await resp.json();
-  const filtered_airports = data.filter((airport) => airport.city.includes(input));
+  const filtered_airports = data.filter((airport) => airport.city.toLowerCase().includes(input));
+  console.log(input);
   return filtered_airports;
 }
 
-function display_cities(data, parent) {
+function display_cities(data, parent, input) {
   parent.innerHTML = "";
 
   data.forEach((airport) => {
+    console.log(airport.city.toLowerCase().indexOf(input));
     const city_html = `<div class="city">
                     <img class="city-img" src="assets/img/${airport.image}" alt="Image of city" width="100px">
                     <div class="city-data-wrapper">
