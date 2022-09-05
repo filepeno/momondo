@@ -13,9 +13,9 @@
 <body>
     <header>
         <img class="logo" src="assets/img/momondo-logo.png" alt="Momondo logo" width="200">
-        <div>
-            <a href="trips">Trips</a>
-            <a href="login">Log in</a>
+        <div class="links">
+            <a class="header-link" href="trips">Trips</a>
+            <a class="log-in" href="login">Log in</a>
             <a href="danish">Dansk</a>
         </div>
 

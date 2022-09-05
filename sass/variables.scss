@@ -4,9 +4,14 @@ $clr-mid-blue: rgba(33, 3, 58, 1);
 $clr-light-blue: rgba(0, 149, 204, 1);
 $clr-light-lila: #9684a4;
 $clr-mid-lila: rgba(167, 98, 234, 0.4);
+$clr-orange: #f57318;
 
 $font-display: "CeraProBold";
 $font-medium: "CeraProMedium";
+
+$fs-sm: 0.8rem;
+$fs-md: 1rem;
+$fs-lg: 1.2rem;
 
 $gutter-xxs: 0.25rem;
 $gutter-xs: 0.5rem;
@@ -15,6 +20,9 @@ $gutter-md: 2rem;
 $gutter-lg: 4rem;
 $gutter-xl: 8rem;
 $gutter-xxl: 15rem;
+
+$duration-fast: 0.15s;
+$duration-mid: 0.3s;
 
 @mixin mq-xxs {
   @media (min-width: 375px) {
