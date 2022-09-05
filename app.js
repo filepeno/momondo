@@ -10,7 +10,7 @@ async function get_input(e) {
   const input = e.target.value;
   const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
-    const data = await get_cities();
+    const data = await get_cities(input);
     display_cities(data, suggestionsWrapper);
     display_suggestions(suggestionsWrapper);
   } else {
@@ -33,11 +33,11 @@ function hide_suggestions(e) {
   e.target.nextElementSibling.classList.remove("active");
 }
 
-async function get_cities() {
+async function get_cities(input) {
   const resp = await fetch("api-get-airports");
   const data = await resp.json();
-  console.log(data);
-  return data;
+  const filtered_airports = data.filter((airport) => airport.city.includes(input));
+  return filtered_airports;
 }
 
 function display_cities(data, parent) {
