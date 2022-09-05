@@ -3,11 +3,15 @@
 $flights = [
     [
         'departure_airport' => 'HEL',
-        'arrival_airport' => 'CPH'
+        'departure_date' => '2020-04-26T07:00',
+        'arrival_airport' => 'CPH',
+        'arrival_date' => '2020-04-26T07:55',
     ],
     [
         'departure_airport' => 'LUT',
-        'arrival_airport' => 'CPH'
+        'departure_date' => '2022-05-26T07:00',
+        'arrival_airport' => 'CPH',
+        'arrival_date' => '2022-05-26T08:55',
     ]
 ];
 
