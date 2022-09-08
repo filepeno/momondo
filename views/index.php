@@ -5,7 +5,7 @@ require_once '../modules/head.php'
 
 <body>
     <header>
-        <a href="/">
+        <a href="/" aria-label="Home">
             <div class="logo">
 
             </div>
