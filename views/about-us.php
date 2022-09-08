@@ -5,11 +5,13 @@ require_once '../partials/html-head.php'
 ?>
 
 <?php
-require_once '../partials/header.php'
+require_once '../partials/side-header.php'
 ?>
 
-
 <main>
+    <?php
+    require_once '../partials/top-header.php'
+    ?>
     <h1>About us</h1>
 </main>
 

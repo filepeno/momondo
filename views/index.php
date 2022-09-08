@@ -5,11 +5,13 @@ require_once '../partials/html-head.php'
 ?>
 
 <?php
-require_once '../partials/header.php'
+require_once '../partials/side-header.php'
 ?>
 
-
 <main>
+    <?php
+    require_once '../partials/top-header.php'
+    ?>
     <div id="search-flights">
         <form id="search-form">
             <div id="from-to-wrapper">
@@ -52,6 +54,7 @@ require_once '../partials/header.php'
 <?php
 require_once '../partials/footer.php'
 ?>
+
 
 <?php
 require_once '../partials/html-bottom.php'

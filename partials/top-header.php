@@ -1,4 +1,4 @@
-<header>
+<div id="top-header">
     <a href="/" aria-label="Home">
         <div class="logo">
 
@@ -11,4 +11,4 @@
         <a id="log-in-btn" href="login">Log in</a>
         <a href="">English</a>
     </div>
-</header>
+</div>
