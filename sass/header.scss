@@ -4,14 +4,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   //height: 5rem;
   background-color: $clr-mid-blue;
   font-size: $fs-sm;
 
   .logo {
+    width: 40px;
     max-width: 100%;
     height: auto;
+    @include mq-sm {
+      width: 300px;
+    }
   }
 
   .links {
