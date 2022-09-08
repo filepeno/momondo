@@ -1,20 +1,24 @@
 header {
+  padding: $gutter-sm;
   width: 100%;
   padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   //height: 5rem;
   background-color: $clr-mid-blue;
   font-size: $fs-sm;
 
   .logo {
-    width: 40px;
-    max-width: 100%;
-    height: auto;
+    background: no-repeat center url("assets/img/logo/momondo-logo-sm.png");
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+
     @include mq-sm {
-      width: 300px;
+      background-image: url("assets/img/logo/momondo-logo-md.png");
+      width: 180px;
     }
   }
 

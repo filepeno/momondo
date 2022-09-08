@@ -5,11 +5,11 @@ require_once '../modules/head.php'
 
 <body>
     <header>
-        <picture class="logo">
-            <source media="(max-width: 969px)" srcset="assets/img/logo/momondo-logo-sm.png">
-            <source media="(min-width: 970px)" srcset="assets/img/logo/momondo-logo-md.png">
-            <img src="assets/img/logo/momondo-logo-sm.png" alt="Momondo logo" width="125">
-        </picture>
+        <a href="/">
+            <div class="logo">
+
+            </div>
+        </a>
         <div class="links">
             <a class="header-link" href="about-us">About us</a>
             <a class="header-link" href="contact-us">Contact us</a>
