@@ -20,7 +20,6 @@ header {
   }
 
   .header-link {
-    text-align: center;
     transition: color $duration-mid ease-in-out;
     &:hover {
       color: #f57318;
@@ -32,6 +31,7 @@ header {
   }
 
   #log-in-btn {
+    //min-width: fit-content;
     padding: 15px 28px;
     border: 1px solid $clr-main;
     border-radius: 5px;
