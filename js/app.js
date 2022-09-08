@@ -34,7 +34,7 @@ function hide_suggestions(e) {
 }
 
 async function get_cities(input) {
-  const resp = await fetch("api-get-airports");
+  const resp = await fetch("api/api-get-airports.php");
   const data = await resp.json();
   const filtered_airports = data.filter((airport) => airport.city.toLowerCase().includes(input));
   console.log(input);
