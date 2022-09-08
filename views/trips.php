@@ -1,5 +1,6 @@
 <?php
-$page_title = 'Momondo';
+$page_title = 'Trips';
+$page_href = '/trips';
 require_once '../partials/html-head.php'
 ?>
 

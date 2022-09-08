@@ -1,5 +1,6 @@
 <?php
 $page_title = 'Contact us';
+$page_href = '/contact-us';
 require_once '../partials/html-head.php'
 ?>
 

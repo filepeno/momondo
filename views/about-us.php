@@ -1,5 +1,6 @@
 <?php
-$page_title = 'Momondo';
+$page_title = 'About us';
+$page_href = '/about-us';
 require_once '../partials/html-head.php'
 ?>
 
