@@ -9,7 +9,7 @@ require_once '../partials/header.php'
 
 
 <main>
-    <h1>About us</h1>
+    <h1>Trips</h1>
 </main>
 
 <?php

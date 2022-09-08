@@ -8,6 +8,7 @@ RewriteRule ^flight-results$        views/flight-results.php [NC,L]
 RewriteRule ^about-us$              views/about-us.php [NC,L]
 RewriteRule ^contact-us$            views/contact-us.php [NC,L]
 RewriteRule ^user-page$             views/user-page.php [NC,L]
+RewriteRule ^trips$                 views/trips.php [NC,L]
 
 #APIs
 #RewriteRule ^api-get-airport$       api/api-get-airport.php [NC,L]

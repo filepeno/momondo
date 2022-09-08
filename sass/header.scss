@@ -29,11 +29,13 @@ header {
   }
 
   .header-link {
+    color: $clr-main;
     transition: color $duration-mid ease-in-out;
     &:hover {
-      color: #f57318;
+      color: $clr-orange;
     }
     &.active {
+      color: $clr-orange;
       text-decoration: underline;
       text-underline-offset: 2px;
     }

@@ -1,1 +1,21 @@
-Contact us
+<?php
+$page_title = 'Contact us';
+require_once '../partials/html-head.php'
+?>
+
+<?php
+require_once '../partials/header.php'
+?>
+
+
+<main>
+    <h1>Contact us</h1>
+</main>
+
+<?php
+require_once '../partials/footer.php'
+?>
+
+<?php
+require_once '../partials/html-bottom.php'
+?>
