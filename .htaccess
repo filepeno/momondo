@@ -1,3 +1,21 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Views
+RewriteRule ^$                      views/index.php [NC,L] 
+RewriteRule ^flight-results$        views/flight-results.php [NC,L]
+RewriteRule ^about-us$              views/about-us.php [NC,L]
+RewriteRule ^contact-us$            views/contact-us.php [NC,L]
+RewriteRule ^user-page$             views/user-page.php [NC,L]
+
+#APIs
+RewriteRule ^api-get-airport$       views/user-page.php [NC,L]
+RewriteRule ^api-get-cities$       views/user-page.php [NC,L]
+RewriteRule ^api-get-flights$       views/user-page.php [NC,L]
+
+#Scripts
+RewriteRule ^app.js$                js/app.js [NC,L]
+
+#CSS
+RewriteRule ^index.css$             css/index.css [NC,L]
