@@ -1,3 +1,5 @@
+import { toggleSideNav } from "./js/side-nav.js";
+
 function trackInput() {
   document.querySelectorAll(".location-input").forEach((element) => {
     element.addEventListener("input", (e) => get_input(e));
@@ -57,4 +59,10 @@ function display_cities(data, parent, input) {
   });
 }
 
+function trackSideNav() {
+  document.querySelector("#toggle-side-nav").addEventListener("click", () => toggleSideNav());
+}
+
 trackInput();
+
+trackSideNav();

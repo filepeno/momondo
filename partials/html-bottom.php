@@ -1,4 +1,4 @@
-<script src="app.js"></script>
+<script src="app.js" type="module"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <header id="side-header">
     <nav id="side-nav">
-        <button id="toggle-side-header">Toggle</button>
+        <button id="toggle-side-nav">Toggle</button>
         <ul>
             <li><a class="side-nav-link" href="">Flights</a></li>
             <li><a class="side-nav-link" href="">Flights</a></li>
