@@ -8,48 +8,51 @@ require_once '../partials/html-head.php'
 require_once '../partials/side-header.php'
 ?>
 
-<main>
-    <?php
-    require_once '../partials/top-header.php'
-    ?>
-    <div id="search-flights">
-        <form id="search-form">
-            <div id="from-to-wrapper">
-                <div class="search-input-wrapper">
-                    <input id="input-from" class="location-input" type="text" placeholder="From?">
-                    <div class="suggestions-wrapper">
+<?php
+require_once '../partials/top-header.php'
+?>
+<div id="main-wrapper">
+    <main>
+        <h1 class="section-title">Welcome! Find a flexible flight for your next trip.</h1>
+        <div id="search-flights">
+            <form id="search-form">
+                <div id="from-to-wrapper">
+                    <div class="search-input-wrapper">
+                        <input id="input-from" class="location-input" type="text" placeholder="From?">
+                        <div class="suggestions-wrapper">
 
 
 
+                        </div>
+                    </div>
+                    <button>Swap</button>
+                    <div class="search-input-wrapper">
+                        <input id="input-to" class="location-input" type="text" placeholder="To?">
+                        <div class="suggestions-wrapper">
+
+
+
+                        </div>
                     </div>
                 </div>
-                <button>Swap</button>
-                <div class="search-input-wrapper">
-                    <input id="input-to" class="location-input" type="text" placeholder="To?">
-                    <div class="suggestions-wrapper">
+                <button id="search-button">Seach</button>
+            </form>
 
+        </div>
 
-
-                    </div>
-                </div>
+        <div id="bottom-wrapper">
+            <div id="filter">
+                FILTER
             </div>
-            <button id="search-button">Seach</button>
-        </form>
-
-    </div>
-
-    <div id="bottom-wrapper">
-        <div id="filter">
-            FILTER
+            <div id="price-diagram">
+                PRICE DIAGRAM
+            </div>
+            <div id="results">
+                RESULTS
+            </div>
         </div>
-        <div id="price-diagram">
-            PRICE DIAGRAM
-        </div>
-        <div id="results">
-            RESULTS
-        </div>
-    </div>
-</main>
+    </main>
+</div>
 
 <?php
 require_once '../partials/footer.php'

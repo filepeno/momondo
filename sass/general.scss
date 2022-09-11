@@ -9,6 +9,7 @@
 body {
   display: grid;
   grid-template-columns: 250px 1fr;
+  row-gap: $gutter-lg;
   width: 100%;
   background-color: $clr-mid-blue;
   color: $clr-main;
@@ -16,8 +17,15 @@ body {
   font-family: $font-medium;
 }
 
+#main-wrapper {
+  grid-area: 2 / 2 / 2 / 3;
+  padding: 0 $gutter-md;
+}
+
 main {
   min-height: 100vw;
+  max-width: $max-width-lg;
+  margin: 0 auto;
 }
 
 h2 {
