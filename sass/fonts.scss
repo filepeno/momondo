@@ -1,13 +1,23 @@
+@import "variables";
+
+@font-face {
+  font-family: "CeraProLight";
+  font-weight: $fw-light;
+  font-style: normal;
+  src: url(/assets/fonts/Cera\ Pro\ Light.ttf);
+  src: url(/assets/fonts/Cera\ Pro\ Light.otf);
+}
 @font-face {
   font-family: "CeraProMedium";
-  font-weight: normal;
+  font-weight: $fw-regular;
   font-style: normal;
   src: url(/assets/fonts/Cera\ Pro\ Medium.ttf);
   src: url(/assets/fonts/Cera\ Pro\ Medium.otf);
 }
+
 @font-face {
   font-family: "CeraProBold";
-  font-weight: normal;
+  font-weight: $fw-bold;
   font-style: normal;
   src: url(/assets/fonts/Cera\ Pro\ Bold.ttf);
   src: url(/assets/fonts/Cera\ Pro\ Bold.otf);

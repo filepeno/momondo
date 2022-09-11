@@ -5,13 +5,19 @@ $clr-light-blue: rgba(0, 149, 204, 1);
 $clr-light-lila: #9684a4;
 $clr-mid-lila: rgba(167, 98, 234, 0.4);
 $clr-orange: #f57318;
+$clr-light-pink: #e1d9e8;
 
-$font-display: "CeraProBold";
-$font-medium: "CeraProMedium";
+$ff-display: "CeraProBold";
+$ff-medium: "CeraProMedium";
+$ff-light: "CeraProLight";
 
 $fs-sm: 0.8rem;
 $fs-md: 1rem;
 $fs-lg: 1.2rem;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
 
 $gutter-xxs: 0.25rem;
 $gutter-xs: 0.5rem;
@@ -43,4 +49,15 @@ $duration-mid: 0.3s;
   @media (min-width: 970px) {
     @content;
   }
+}
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -1,5 +1,23 @@
 @import "variables";
 
+body {
+  font-family: $ff-medium;
+  color: $clr-main;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $ff-display;
+}
+
+ul {
+  list-style: none;
+}
+
 .section-title {
   margin-bottom: $gutter-sm;
 }
