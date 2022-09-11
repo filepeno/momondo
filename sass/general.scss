@@ -7,6 +7,8 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 250px 1fr;
   width: 100%;
   background-color: $clr-mid-blue;
   color: $clr-main;
@@ -16,12 +18,6 @@ body {
 
 main {
   min-height: 100vw;
-}
-
-//shift main and footer when side-nav is opened
-main,
-footer {
-  margin-left: $side-header-active-lg;
 }
 
 h2 {

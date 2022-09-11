@@ -1,6 +1,10 @@
 #side-header {
-  position: fixed;
-  width: $side-header-active-lg;
+  position: relative;
+  grid-area: 1 / 1 / 3 / 2;
+
   #side-nav {
+    position: sticky;
+    bottom: 0;
+    top: 0;
   }
 }
