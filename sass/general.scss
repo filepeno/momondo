@@ -8,7 +8,7 @@
 
 body {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: min-content 1fr;
   row-gap: $gutter-lg;
   width: 100%;
   background-color: $clr-mid-blue;
