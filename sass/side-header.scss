@@ -6,7 +6,8 @@
   width: fit-content;
   background-color: transparent;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: $br-sm;
+
   &:before {
     position: relative;
     width: 22px;
@@ -99,7 +100,7 @@
   padding: 10px;
   font-family: $ff-light;
   font-size: $fs-sm;
-  border-radius: 5px;
+  border-radius: $br-sm;
 
   /* Icon */
   &:before {

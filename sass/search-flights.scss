@@ -2,8 +2,9 @@
 
 #search-flights {
   width: 100%;
-  background-color: $clr-dark-blue;
-  padding: $gutter-md $gutter-sm;
+
+  /*   background-color: $clr-dark-blue;
+  padding: $gutter-md $gutter-sm; */
 }
 
 #search-form {
@@ -12,6 +13,7 @@
   justify-content: space-between;
   background: $clr-light-blue;
   padding: $gutter-xs;
+  border-radius: $br-sm;
 }
 
 #from-to-wrapper {
@@ -22,7 +24,22 @@
 }
 
 .search-input-wrapper {
-  //width: 100%;
+  position: relative;
+
+  input {
+    padding-left: 40px;
+  }
+
+  &:before {
+    position: absolute;
+    background: url("https://api.iconify.design/jam/plane.svg") no-repeat center center / contain;
+    content: "";
+    height: 100%;
+    width: 18px;
+    left: 12px;
+    top: 0;
+    z-index: 2;
+  }
 }
 
 .suggestions-wrapper {
