@@ -1,6 +1,6 @@
 <header id="side-header">
     <nav id="side-nav">
-        <button id="toggle-side-nav">Toggle</button>
+        <button id="toggle-menu-btn" aria-label="Toggle side menu"></button>
         <ul>
             <li>
                 <a class="side-nav-link <?= $page_href == '/sign-in' ? 'active' : '' ?>" href="/sign-in"><span class="link-text">Sign in</span></a>

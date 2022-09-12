@@ -60,7 +60,7 @@ function display_cities(data, parent, input) {
 }
 
 function trackSideNav() {
-  document.querySelector("#toggle-side-nav").addEventListener("click", () => toggleSideNav());
+  document.querySelector("#toggle-menu-btn").addEventListener("click", () => toggleSideNav());
 }
 
 trackInput();
