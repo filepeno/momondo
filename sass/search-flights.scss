@@ -50,9 +50,9 @@
   position: absolute;
   z-index: 1;
   width: 200%;
-  //height: 18rem;
+  padding: $gutter-sm;
   background-color: $clr-main;
-  border-radius: $gutter-sm;
+  border-radius: calc($br-sm * 2);
   &.active {
     display: block;
   }
@@ -68,7 +68,7 @@
 
 .city-img {
   max-width: 50px;
-  border-radius: $gutter-sm;
+  border-radius: calc($br-sm * 2);
 }
 
 .city-name {

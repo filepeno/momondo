@@ -2,7 +2,7 @@ export function trackSearchInput() {
   document.querySelectorAll(".location-input").forEach((element) => {
     element.addEventListener("input", (e) => getInput(e));
     element.addEventListener("focus", (e) => getInput(e));
-    element.addEventListener("blur", (e) => hideSuggestions(e));
+    //element.addEventListener("blur", (e) => hideSuggestions(e));
   });
 }
 
@@ -11,8 +11,12 @@ async function getInput(e) {
   const suggestionsWrapper = e.target.nextElementSibling;
   if (input.length > 0) {
     const data = await getCities(input);
-    displayCities(data, suggestionsWrapper, input);
-    displaySuggestions(suggestionsWrapper);
+    if (data.length) {
+      displayCities(data, suggestionsWrapper, input);
+      displaySuggestions(suggestionsWrapper);
+    } else {
+      hideAllSuggestions();
+    }
   } else {
     hideSuggestions(e);
   }
