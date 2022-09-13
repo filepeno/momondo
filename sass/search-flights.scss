@@ -64,6 +64,9 @@
   padding: 0.5rem;
   gap: 1rem;
   color: $clr-dark-blue;
+  .city-data-wrapper {
+    text-align: left;
+  }
 }
 
 .city-img {
