@@ -37,7 +37,7 @@ require_once '../partials/top-header.php'
                         </div>
                     </div>
                 </div>
-                <button id="search-button">Seach</button>
+                <button id="search-btn">Search</button>
             </form>
 
         </div>

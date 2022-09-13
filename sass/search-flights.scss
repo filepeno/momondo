@@ -11,6 +11,7 @@
   display: flex;
   width: 100%;
   gap: 20px;
+  align-items: center;
 }
 
 #form-inputs-wrapper {
@@ -19,6 +20,7 @@
   background: $clr-light-blue;
   padding: $gutter-xs;
   border-radius: $br-sm;
+  height: max-content;
 }
 
 #from-to-wrapper {
