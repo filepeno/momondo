@@ -8,9 +8,14 @@
 }
 
 #search-form {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+#form-inputs-wrapper {
+  width: inherit;
+  display: flex;
   background: $clr-light-blue;
   padding: $gutter-xs;
   border-radius: $br-sm;
@@ -18,9 +23,8 @@
 
 #from-to-wrapper {
   display: flex;
-  width: 50%;
+  gap: $gutter-xs;
   position: relative;
-  justify-content: space-between;
 }
 
 .search-input-wrapper {
@@ -32,13 +36,9 @@
 
   &:before {
     position: absolute;
-    background: url("https://api.iconify.design/jam/plane.svg") no-repeat center center / contain;
-    content: "";
-    height: 100%;
-    width: 18px;
+    width: 1.4rem;
     left: 12px;
-    top: 0;
-    z-index: 2;
+    top: 29%;
   }
 }
 

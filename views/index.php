@@ -16,22 +16,24 @@ require_once '../partials/top-header.php'
         <h1 class="section-title">Welcome! Find a flexible flight for your next trip.</h1>
         <div id="search-flights">
             <form id="search-form">
-                <div id="from-to-wrapper">
-                    <div class="search-input-wrapper">
-                        <input id="input-from" class="location-input" type="text" placeholder="From?">
-                        <div class="suggestions-wrapper">
+                <div id="form-inputs-wrapper">
+                    <div id="from-to-wrapper">
+                        <div class="search-input-wrapper icon plane">
+                            <input id="input-from" class="location-input" type="text" placeholder="From?">
+                            <div class="suggestions-wrapper">
 
 
 
+                            </div>
                         </div>
-                    </div>
-                    <button>Swap</button>
-                    <div class="search-input-wrapper">
-                        <input id="input-to" class="location-input" type="text" placeholder="To?">
-                        <div class="suggestions-wrapper">
+                        <button>Swap</button>
+                        <div class="search-input-wrapper icon plane">
+                            <input id="input-to" class="location-input" type="text" placeholder="To?">
+                            <div class="suggestions-wrapper">
 
 
 
+                            </div>
                         </div>
                     </div>
                 </div>
