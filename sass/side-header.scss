@@ -14,14 +14,10 @@
     height: 22px;
     padding: 10px;
     content: "";
-    background: url("https://api.iconify.design/bytesize/menu.svg?color=%239684a4") no-repeat center center / contain;
   }
 
   &:hover {
     background-color: $clr-light-pink;
-    &:before {
-      background: url("https://api.iconify.design/bytesize/menu.svg?color=black") no-repeat center center / contain;
-    }
   }
 }
 
@@ -72,9 +68,6 @@
 
     #toggle-menu-btn {
       background-color: $clr-light-pink;
-      &:before {
-        background: url("https://api.iconify.design/bytesize/menu.svg?color=black") no-repeat center center / contain;
-      }
     }
 
     .side-nav-link {
@@ -105,7 +98,6 @@
   /* Icon */
   &:before {
     position: relative;
-    content: url("https://api.iconify.design/jam/plane.svg?color=%239684a4");
     display: inline-block;
     height: 22px;
     width: 22px;
@@ -119,8 +111,5 @@
 
   &.active {
     font-family: $ff-display;
-    &:before {
-      content: url("https://api.iconify.design/jam/plane.svg?color=black");
-    }
   }
 }

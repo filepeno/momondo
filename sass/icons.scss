@@ -1,0 +1,52 @@
+.icon.lila {
+  &.active:before {
+    filter: none;
+  }
+  &:before {
+    filter: invert(61%) sepia(2%) saturate(3732%) hue-rotate(230deg) brightness(89%) contrast(83%);
+  }
+}
+
+.menu:before {
+  background: url(/assets/icons/menu.svg) no-repeat center center / contain;
+}
+
+.profile:before {
+  content: url(/assets/icons/profile.svg);
+}
+
+.plane:before {
+  content: url(/assets/icons/plane.svg);
+}
+
+.bed:before {
+  content: url(/assets/icons/bed.svg);
+}
+
+.car:before {
+  content: url(/assets/icons/car.svg);
+}
+
+.ship:before {
+  content: url(/assets/icons/ship.svg);
+}
+
+.beach:before {
+  content: url(/assets/icons/beach.svg);
+}
+
+.directions:before {
+  content: url(/assets/icons/directions.svg);
+}
+
+.globe:before {
+  content: url(/assets/icons/globe.svg);
+}
+
+.shield:before {
+  content: url(/assets/icons/shield.svg);
+}
+
+.notes:before {
+  content: url(/assets/icons/notes.svg);
+}
