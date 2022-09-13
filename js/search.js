@@ -40,9 +40,11 @@ function hideSuggestions(e) {
 async function getCities(input) {
   const resp = await fetch("api/api-get-airports.php");
   const data = await resp.json();
-  const filteredAirports = data.filter((airport) => airport.city.toLowerCase().includes(input));
-  console.log(input);
-  return filteredAirports;
+  const filterByCities = data.filter((airport) => airport.city.toLowerCase().includes(input));
+  const filterByCountries = data.filter((airport) => airport.country.toLowerCase().includes(input));
+  const allMatches = filterByCities.concat(filterByCountries);
+  const uniqueAirports = [...new Set(allMatches)];
+  return uniqueAirports;
 }
 
 function displayCities(data, parent, input) {
@@ -50,13 +52,13 @@ function displayCities(data, parent, input) {
 
   data.forEach((airport) => {
     console.log(airport.city.toLowerCase().indexOf(input));
-    const cityHtml = `<div class="city">
-                      <img class="city-img" src="assets/img/${airport.image}" alt="Image of city" width="100px">
-                      <div class="city-data-wrapper">
-                          <h2 class="city-name">${airport.city ?? "UPS..."}</h2>
-                          <p>${airport.name ?? "ups.."}</p>
-                      </div>
-                  </div>`;
+    const cityHtml = `<button class="city">
+                        <img class="city-img" src="assets/img/${airport.image}" alt="Image of city" width="100px">
+                        <div class="city-data-wrapper">
+                            <h2 class="city-name"><span>${airport.city ?? "UPS..."}, <span>${airport.country ?? "UPS..."}<span></h2>
+                            <p>${airport.name ?? "ups.."}</p>
+                        </div>
+                      </button>`;
     parent.insertAdjacentHTML("beforeEnd", cityHtml);
   });
 }
