@@ -1,0 +1,33 @@
+@import "variables";
+
+#toggle-menu-btn {
+  border: none;
+  position: relative;
+  width: fit-content;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: $br-sm;
+
+  &:before {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+    content: "";
+  }
+
+  &:hover {
+    background-color: $clr-light-pink;
+  }
+}
+
+#swap-from-to-btn {
+  width: 2.4rem;
+  height: $height-input;
+  padding: $gutter-xs;
+  background: url(/assets/icons/switch.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: $clr-white-alpha-1;
+  border-radius: $br-sm;
+}

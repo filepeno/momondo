@@ -26,7 +26,7 @@ require_once '../partials/top-header.php'
 
                             </div>
                         </div>
-                        <button>Swap</button>
+                        <button aria-label="Swap departure and destination locations" type="button" id="swap-from-to-btn"></button>
                         <div class="search-input-wrapper icon plane">
                             <input id="input-to" class="location-input" type="text" placeholder="To?">
                             <div class="suggestions-wrapper">
