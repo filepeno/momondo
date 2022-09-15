@@ -43,16 +43,4 @@
       text-underline-offset: 2px;
     }
   }
-
-  #log-in-btn {
-    //min-width: fit-content;
-    padding: 15px 28px;
-    border: 1px solid $clr-main;
-    border-radius: 5px;
-    transition: background-color $duration-fast ease-in-out;
-    &:hover {
-      background-color: $clr-main;
-      color: $clr-dark-blue;
-    }
-  }
 }
