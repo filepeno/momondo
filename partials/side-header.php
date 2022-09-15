@@ -3,7 +3,7 @@
         <button class="icon menu lila" id="toggle-menu-btn" aria-label="Toggle side menu"></button>
         <ul>
             <li>
-                <a class="side-nav-link icon profile lila" <?= $page_href == '/sign-in' ? 'active' : '' ?> href="/sign-in"><span class="link-text">Sign in</span></a>
+                <a class="side-nav-link icon profile lila <?= $page_href == '/sign-in' ? 'active' : '' ?>" href="/sign-in"><span class="link-text">Sign in</span></a>
             </li>
         </ul>
         <ul>

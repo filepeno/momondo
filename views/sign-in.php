@@ -1,7 +1,7 @@
 <?php
-$page_title = 'Log in to Momondo';
-$page_href = '/';
-$page_id = 'login-page';
+$page_title = 'Sign in';
+$page_href = '/sign-in';
+$page_id = 'sign-in-page';
 require_once '../partials/html-head.php'
 ?>
 
@@ -14,8 +14,8 @@ require_once '../partials/top-header.php'
 ?>
 <div id="main-wrapper">
     <main>
-        <h1>Log ind, eller opret en konto</h1>
-        <p>Følg priser, organiser rejseplaner, og få adgang til medlemstilbud med din momondo-konto.</p>
+        <h1>Sign in or create an account</h1>
+        <p>Track prices, organise travel plans and access member-only deals with your momondo account.</p>
     </main>
 </div>
 <?php
