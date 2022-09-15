@@ -10,4 +10,4 @@
 
 </head>
 
-<body>
+<body id="<?= $page_id ?? '' ?>">

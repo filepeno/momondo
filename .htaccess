@@ -9,12 +9,12 @@ RewriteRule ^about-us$              views/about-us.php [NC,L]
 RewriteRule ^contact-us$            views/contact-us.php [NC,L]
 RewriteRule ^user-page$             views/user-page.php [NC,L]
 RewriteRule ^trips$                 views/trips.php [NC,L]
+RewriteRule ^login$                 views/login.php [NC,L]
 
 #APIs
 #RewriteRule ^api-get-airport$       api/api-get-airport.php [NC,L]
 #RewriteRule ^api-get-cities$        api/api-get-cities.php [NC,L]
 #RewriteRule ^api-get-flights$       api/api-get-flights.php [NC,L]
-RewriteRule ^login$                 api/api-login.php [NC,L]
 
 #Scripts
 RewriteRule ^app.js$                js/app.js [NC,L]
