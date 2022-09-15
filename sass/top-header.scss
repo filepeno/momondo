@@ -2,9 +2,8 @@
 
 #top-header {
   grid-area: 1 / 2 / 2 / 3;
-  padding: $gutter-sm;
+  padding: $gutter-xs $gutter-sm;
   width: 100%;
-  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
