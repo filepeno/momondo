@@ -1,15 +1,23 @@
 @import "variables";
 
 input {
-  height: $height-input;
-  padding-left: 0.5rem;
-  outline: none;
-  border-radius: 0.5rem;
-  border: none;
   background-color: $clr-main;
   font-family: $ff-light;
+  outline: none;
+}
+
+.search-input {
+  height: $height-input;
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 .login-input {
   border: 1px solid $clr-light-pink;
+  height: 2rem;
+  &:focus {
+    box-shadow: 0 3px 5px 0 $clr-light-blue;
+    border-bottom: 2px solid #2540a4;
+  }
 }

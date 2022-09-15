@@ -1,4 +1,5 @@
 $clr-main: #f3f0f5;
+$clr-black: #000;
 $clr-dark-blue: #130026;
 $clr-mid-blue: rgba(33, 3, 58, 1);
 $clr-light-blue: rgba(0, 149, 204, 1);
@@ -35,6 +36,7 @@ $br-sm: 4px;
 //search
 $height-input: 3rem;
 
+$max-width-xs: 350px;
 $max-width-sm: 500px;
 $max-width-md: 700px;
 $max-width-lg: 1000px;
@@ -69,4 +71,5 @@ $duration-mid: 0.3s;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }

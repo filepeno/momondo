@@ -1,5 +1,14 @@
 @import "variables";
 
+.gradient-btn {
+  background: linear-gradient(135deg, $clr-hot-pink 0%, $clr-mid-purple 100%);
+  color: $clr-main;
+}
+
+.continue-btn {
+  padding: $gutter-xs $gutter-md;
+}
+
 #toggle-menu-btn {
   border: none;
   position: relative;
@@ -36,8 +45,6 @@
   min-width: calc($height-input + 3rem);
   min-height: calc($height-input + 3rem);
   border-radius: calc($height-input + 3rem / 2);
-  background: linear-gradient(135deg, $clr-hot-pink 0%, $clr-mid-purple 100%);
-  color: $clr-main;
   transition: transform $duration-fast ease-in-out;
   &:hover {
     transform: scale(1.05);

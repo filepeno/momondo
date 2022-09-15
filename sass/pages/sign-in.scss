@@ -1,0 +1,36 @@
+@import "../variables";
+
+#sign-in-page {
+  main {
+    max-width: $max-width-sm;
+  }
+
+  .form-wrapper {
+    padding: $gutter-md $gutter-lg;
+    color: $clr-black;
+    background-color: $clr-main;
+    @include flex-column-center;
+    gap: $gutter-sm;
+  }
+
+  .bg-img {
+    height: 180px;
+    width: 250px;
+    max-width: 100%;
+    background: url(/assets/img/interface/authentication.svg) no-repeat center;
+  }
+
+  #email-form {
+    width: 100%;
+    @include flex-column-center;
+
+    input,
+    button {
+      width: 100%;
+      max-width: $max-width-xs;
+    }
+
+    #user-email {
+    }
+  }
+}
