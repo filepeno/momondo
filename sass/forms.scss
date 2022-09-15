@@ -1,0 +1,15 @@
+@import "variables";
+
+input {
+  height: $height-input;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: $clr-main;
+  font-family: $ff-light;
+}
+
+.login-input {
+  border: 1px solid $clr-light-pink;
+}
