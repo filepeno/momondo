@@ -1,10 +1,19 @@
 @import "variables";
 
+label {
+  display: inline-block;
+  margin-bottom: $gutter-xs;
+}
+
 input {
+  display: inline-block;
   background-color: $clr-main;
   font-family: $ff-light;
   outline: none;
   padding: $gutter-xs;
+  &.invalid {
+    background-color: $clr-util-invalid-input;
+  }
 }
 
 .search-input {
@@ -20,5 +29,24 @@ input {
   &:focus {
     box-shadow: 0 3px 5px 0 $clr-light-blue;
     border-bottom: 2px solid #2540a4;
+  }
+}
+
+.input-wrapper {
+  /*  @include flex-column-center;
+  align-items: left;
+  gap: $gutter-xxs; */
+}
+
+.validation-msg {
+  visibility: hidden;
+  font-size: $fs-sm;
+  margin-top: $gutter-xxs;
+  margin-left: $gutter-xs;
+  &.visible {
+    visibility: visible;
+  }
+  &.invalid {
+    color: $clr-util-invalid-msg;
   }
 }

@@ -16,20 +16,19 @@
 
   .bg-img {
     height: 180px;
-    width: 250px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 250px;
     background: url(/assets/img/interface/authentication.svg) no-repeat center;
   }
 
   #email-form {
     width: 100%;
+    max-width: $max-width-xs;
     @include flex-column-center;
-    gap: $gutter-sm;
+    gap: $gutter-xs;
 
-    input,
-    button {
-      width: 100%;
-      max-width: $max-width-xs;
+    & * {
+      width: inherit;
     }
 
     #user-email {

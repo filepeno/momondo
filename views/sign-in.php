@@ -18,9 +18,12 @@ require_once '../partials/top-header.php'
             <div class="bg-img"></div>
             <h1>Sign in or create an account</h1>
             <!--<p>Track prices, organise travel plans and access member-only deals with your momondo account.</p>-->
-            <form action="" id="email-form">
-                <label for="user_email">What is your email address?</label>
-                <input class="login-input" type="text" name="user_email" id="user-email" placeholder="Please enter your email">
+            <form id="email-form" onsubmit="return false">
+                <div class="input-wrapper">
+                    <label for="user_email">What is your email address?</label>
+                    <input oninput="hideValidationMsg()" onblur="validate()" class="login-input" data-validate="email" type="text" name="user_email" id="user-email" placeholder="Please enter your email">
+                    <p class="validation-msg">Hello</p>
+                </div>
                 <button class="continue-btn gradient-btn">Continue</button>
             </form>
         </section>
