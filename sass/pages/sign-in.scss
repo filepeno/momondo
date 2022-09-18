@@ -11,6 +11,7 @@
     background-color: $clr-main;
     @include flex-column-center;
     gap: $gutter-sm;
+    border-radius: $gutter-sm;
   }
 
   .bg-img {
@@ -23,6 +24,7 @@
   #email-form {
     width: 100%;
     @include flex-column-center;
+    gap: $gutter-sm;
 
     input,
     button {

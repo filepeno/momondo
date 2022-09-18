@@ -4,6 +4,7 @@ input {
   background-color: $clr-main;
   font-family: $ff-light;
   outline: none;
+  padding: $gutter-xs;
 }
 
 .search-input {
