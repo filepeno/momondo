@@ -59,8 +59,8 @@ export default class SignIn {
     if (!resp.ok) {
       console.log(await resp.json());
     } else {
-      /* const data = await resp.json();
-      console.log("success! user: ", data); */
+      const data = await resp.json();
+      console.log("success! user: ", data);
       location.href = "/user-page";
     }
   }

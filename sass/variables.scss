@@ -18,7 +18,7 @@ $ff-display: "CeraProBold";
 $ff-medium: "CeraProMedium";
 $ff-light: "CeraProLight";
 
-$fs-sm: 0.8rem;
+$fs-sm: 0.9rem;
 $fs-md: 1rem;
 $fs-lg: 1.2rem;
 
@@ -44,7 +44,12 @@ $max-width-sm: 500px;
 $max-width-md: 700px;
 $max-width-lg: 1000px;
 
-$icon-size-sm: 22px;
+$icon-size-sm-px: 22px;
+
+$icon-size-xxs-rem: 0.5rem;
+$icon-size-xs-rem: 1rem;
+$icon-size-sm-rem: 1.25rem;
+$icon-size-md-rem: 1.8rem;
 
 $duration-fast: 0.15s;
 $duration-mid: 0.3s;

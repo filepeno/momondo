@@ -19,8 +19,8 @@
 
   &:before {
     position: relative;
-    width: 22px;
-    height: 22px;
+    width: $icon-size-sm-px;
+    height: $icon-size-sm-px;
     padding: 10px;
     content: "";
   }
@@ -66,5 +66,30 @@
   &:before {
     height: 1.2rem;
     width: 1.2rem;
+  }
+}
+
+#profile-btn {
+  color: $clr-main;
+  display: flex;
+  align-items: center;
+  gap: $gutter-xs;
+  &:before {
+    width: $icon-size-md-rem;
+    height: $icon-size-md-rem;
+  }
+  span.icon {
+    display: block;
+    width: $icon-size-xxs-rem;
+    height: 100%;
+    &:before {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .profile-img {
+    width: $icon-size-md-rem;
+    border-radius: calc($icon-size-md-rem / 2);
   }
 }

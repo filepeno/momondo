@@ -14,6 +14,9 @@
   &:before {
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
   }
+  &.no-hover:hover:before {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+  }
 }
 
 .menu:before {
@@ -58,4 +61,8 @@
 
 .notes:before {
   content: url(/assets/icons/notes.svg);
+}
+
+.arrow-down:before {
+  content: url(/assets/icons/arrow-down.svg);
 }

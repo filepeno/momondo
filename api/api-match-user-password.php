@@ -20,3 +20,4 @@ session_start();
 $_SESSION['user_first_name'] = $user['user_first_name'];
 $_SESSION['user_last_name'] = $user['user_last_name'];
 $_SESSION['user_email'] = $user['user_email'];
+$_SESSION['user_img'] = $user['user_img'];

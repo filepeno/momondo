@@ -10,21 +10,24 @@ function _check_user_existense($email)
             'user_email' => 'john@doe.com',
             'user_password' => 'pw123',
             'user_first_name' => 'John',
-            'user_last_name' => 'Doe'
+            'user_last_name' => 'Doe',
+            'user_img' => ''
         ],
         [
 
             'user_email' => 'jane@doe.com',
             'user_password' => 'pw123',
             'user_first_name' => 'Jane',
-            'user_last_name' => 'Doe'
+            'user_last_name' => 'Doe',
+            'user_img' => ''
         ],
         [
 
             'user_email' => 'a@a.com',
             'user_password' => 'pw123',
             'user_first_name' => 'Alex',
-            'user_last_name' => 'Abbot'
+            'user_last_name' => 'Abbot',
+            'user_img' => '/assets/img/profile-images/filip-xs.jfif'
         ]
     ];
 

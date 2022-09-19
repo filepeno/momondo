@@ -4,6 +4,7 @@
         <button class="icon menu lila" id="toggle-menu-btn" aria-label="Toggle side menu"></button>
         <?php
         ini_set('display_errors', 0);
+        session_start();
         if (!$_SESSION) { ?>
             <ul>
                 <li>
