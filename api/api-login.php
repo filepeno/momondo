@@ -18,9 +18,16 @@ $existing_users = [
         'user_password' => 'pw123',
         'user_first_name' => 'Jane',
         'user_last_name' => 'Doe'
+    ],
+    [
+
+        'user_email' => 'a@a.com',
+        'user_password' => 'pw123',
+        'user_first_name' => 'Alex',
+        'user_last_name' => 'Abbot'
     ]
 ];
 
 $user = _check_user_existense($existing_users, $email);
 
-echo json_encode(['info' => $user]);
+echo json_encode($user);

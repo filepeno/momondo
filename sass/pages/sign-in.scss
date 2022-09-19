@@ -21,17 +21,37 @@
     background: url(/assets/img/interface/authentication.svg) no-repeat center;
   }
 
-  #email-form {
+  form {
     width: 100%;
     max-width: $max-width-xs;
     @include flex-column-center;
     gap: $gutter-xs;
 
+    &.inactive {
+      display: none;
+    }
+
     & * {
       width: inherit;
     }
 
+    label {
+      font-family: $ff-light;
+      span {
+        font-family: $ff-medium;
+      }
+    }
+
     #user-email {
+    }
+  }
+
+  .sign-in-input {
+    border: 1px solid $clr-light-pink;
+    height: 2rem;
+    &:focus {
+      box-shadow: 0 3px 5px 0 $clr-light-blue;
+      border-bottom: 2px solid #2540a4;
     }
   }
 }
