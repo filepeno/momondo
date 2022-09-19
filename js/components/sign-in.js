@@ -27,7 +27,7 @@ export default class SignIn {
   }
 
   async getUsers() {
-    const resp = await fetch("api/api-login.php", {
+    const resp = await fetch("api/api-check-user-existence.php", {
       method: "POST",
       body: new FormData(this.emailForm),
     });
@@ -59,8 +59,9 @@ export default class SignIn {
     if (!resp.ok) {
       console.log(await resp.json());
     } else {
-      const data = await resp.json();
-      console.log(data);
+      /* const data = await resp.json();
+      console.log("success! user: ", data); */
+      location.href = "/user-page";
     }
   }
 }

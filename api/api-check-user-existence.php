@@ -1,5 +1,8 @@
 <?php
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/_x.php';
+require_once __DIR__ . '/api-check-user-existence.php';
+
 function _check_user_existense($email)
 {
     $existing_users = [
@@ -34,3 +37,9 @@ function _check_user_existense($email)
     echo json_encode(['info' => 'user does not exist']);
     exit();
 }
+
+$email = _validate_email();
+
+$user = _check_user_existense($email);
+
+echo json_encode($user['user_email']);

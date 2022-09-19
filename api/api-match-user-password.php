@@ -15,4 +15,8 @@ if ($user['user_password'] != $input_password) {
     exit();
 }
 
-echo json_encode(['info' => $user]);
+//echo json_encode(['info' => $user]);
+session_start();
+$_SESSION['user_first_name'] = $user['user_first_name'];
+$_SESSION['user_last_name'] = $user['user_last_name'];
+$_SESSION['user_email'] = $user['user_email'];
