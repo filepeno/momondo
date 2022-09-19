@@ -14,6 +14,13 @@ input {
   &.invalid {
     background-color: $clr-util-invalid-input;
   }
+  &[type="password"] {
+    //font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.2rem;
+    &:placeholder-shown {
+      letter-spacing: normal;
+    }
+  }
 }
 
 .search-input {

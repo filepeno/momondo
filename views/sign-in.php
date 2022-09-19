@@ -2,7 +2,8 @@
 $page_title = 'Sign in';
 $page_href = '/sign-in';
 $page_id = 'sign-in-page';
-require_once '../partials/html-head.php'
+require_once '../partials/html-head.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/_x.php';
 ?>
 
 <?php
@@ -21,7 +22,7 @@ require_once '../partials/top-header.php'
             <form id="email-form" onsubmit="return false" data-component="form-validation">
                 <div class="input-wrapper">
                     <label for="user_email">What is your email address?</label>
-                    <input class="sign-in-input" data-validate="email" type="text" name="user_email" id="user-email" placeholder="Please enter your email">
+                    <input class="sign-in-input" data-validate="email" type="text" name="user_email" placeholder="Please enter your email">
                     <p class="validation-msg">Hello</p>
                 </div>
                 <button class="continue-btn gradient-btn" data-component="sign-in" type="submit">Continue</button>
@@ -29,10 +30,11 @@ require_once '../partials/top-header.php'
             <form id="password-form" class="inactive" onsubmit="return false" data-component="form-validation">
                 <div class="input-wrapper">
                     <label for="user_password">Please enter the password for <span>example@gmail.com</span></label>
-                    <input class="sign-in-input" data-validate="str" type="text" name="user_password" id="user-password" placeholder="Password">
+                    <input class="sign-in-input" data-validate="str" data-min="<?= _USER_PASSWORD_MIN_LEN ?>" data-max="<?= _USER_PASSWORD_MAX_LEN ?>" maxlength="<?= _USER_PASSWORD_MAX_LEN ?>" type="password" name="user_password" placeholder="Password">
                     <p class="validation-msg">Hello</p>
                 </div>
-                <button class="continue-btn gradient-btn" type="submit">Continue</button>
+                <input style="display:none" type="text" name="user_email">
+                <button class="continue-btn gradient-btn" type="submit">Sign in</button>
             </form>
         </section>
     </main>

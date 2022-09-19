@@ -2,7 +2,7 @@ export default class SignIn {
   constructor(element) {
     this.el = element;
     this.emailForm = this.el.form;
-    this.inputs = this.emailForm.querySelectorAll("input");
+    this.inputs = this.emailForm.querySelectorAll("[data-validate]");
 
     /*     this.email = this.emailForm.querySelector("input[name=email]").value; */
     this.passwordForm = document.querySelector("#password-form");
@@ -11,17 +11,19 @@ export default class SignIn {
   }
 
   init() {
-    this.el.addEventListener("click", () => this.checkValidity());
-  }
-
-  checkValidity() {
-    this.inputs.forEach((element) => {
-      if (element.classList.contains("invalid") || element.value == "") {
-        return;
-      } else {
+    this.el.addEventListener("click", () => {
+      if (this.checkValidity()) {
         this.getUsers();
       }
     });
+  }
+
+  checkValidity() {
+    if (event.target.form.querySelector("[data-validate].invalid")) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   async getUsers() {
@@ -31,18 +33,34 @@ export default class SignIn {
     });
     if (!resp.ok) {
       console.log(await resp.json());
+      //TODO: display sign up view
     } else {
-      const user = await resp.json();
-      console.log(user);
-      this.displayPasswordForm(user);
+      const userEmail = await resp.json();
+      this.displayPasswordForm(userEmail);
     }
   }
 
-  displayPasswordForm(user) {
+  displayPasswordForm(userEmail) {
     this.emailForm.classList.add("inactive");
     this.passwordForm.classList.remove("inactive");
-    this.passwordForm.querySelector("label span").textContent = user.user_email;
-
-    console.log(user.user_email);
+    this.passwordForm.querySelector("label span").textContent = userEmail;
+    this.passwordForm.querySelector("[name=user_email]").value = userEmail;
+    this.passwordForm.querySelector("button[type=submit]").addEventListener("click", () => {
+      if (this.checkValidity()) {
+        this.matchPasswords();
+      }
+    });
+  }
+  async matchPasswords() {
+    const resp = await fetch("api/api-match-user-password.php", {
+      method: "POST",
+      body: new FormData(this.passwordForm),
+    });
+    if (!resp.ok) {
+      console.log(await resp.json());
+    } else {
+      const data = await resp.json();
+      console.log(data);
+    }
   }
 }

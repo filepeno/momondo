@@ -6,6 +6,10 @@ define('_USER_LAST_NAME_MAX_LEN', 3);
 
 define('_REGEX_EMAIL', '/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/');
 
+define('_USER_PASSWORD_MIN_LEN', 5);
+define('_USER_PASSWORD_MAX_LEN', 10);
+
+
 
 // ##############################
 function _validate_user_name()
@@ -54,6 +58,25 @@ function _validate_email()
   }
   return $_POST['user_email'];
 }
+
+// ##############################
+function _validate_user_password()
+{
+  $error_message = 'password missing or invalid';
+  if (!isset($_POST['user_password'])) {
+    _respond($error_message, 400);
+  }
+  $_POST['user_password'] = trim($_POST['user_password']);
+  if (strlen($_POST['user_password']) < _USER_PASSWORD_MIN_LEN) {
+    _respond($error_message, 400);
+  }
+  if (strlen($_POST['user_password']) > _USER_PASSWORD_MAX_LEN) {
+    _respond($error_message, 400);
+  }
+  return $_POST['user_password'];
+}
+
+
 
 // ##############################
 function _respond($message = '',  $http_response_code = 200)

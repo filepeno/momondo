@@ -5,7 +5,6 @@ export default class FormValidation {
     this.el = element;
     this.inputs = this.el.querySelectorAll("[data-validate]");
     this.submitBtn = this.el.querySelector("button[type=submit]");
-    console.log();
     this.init();
   }
 
@@ -30,6 +29,7 @@ export default class FormValidation {
       case "str":
         if (element.value.length < parseInt(element.getAttribute("data-min")) || element.value.length > parseInt(element.getAttribute("data-max"))) {
           element.classList.add("invalid");
+          this.displayValidationMsg(element, false, "Password is not valid");
         }
         break;
       case "int":
@@ -41,7 +41,7 @@ export default class FormValidation {
         let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!re.test(element.value.toLowerCase())) {
           element.classList.add("invalid");
-          this.displayValidationMsg(element, false, "Email address in not valid");
+          this.displayValidationMsg(element, false, "Email address is not valid");
         }
         break;
       case "regex":
