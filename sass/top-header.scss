@@ -42,4 +42,15 @@
       text-underline-offset: 2px;
     }
   }
+  .profile-menu-wrapper {
+    position: relative;
+  }
+
+  .profile-menu {
+    background-color: $clr-main;
+    position: absolute;
+    a {
+      color: $clr-black;
+    }
+  }
 }

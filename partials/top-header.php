@@ -16,14 +16,21 @@
             <a class="profile icon white" id="log-in-btn" href="/sign-in">Sign in</a>
         <?php } else {
         ?>
-            <button id="profile-btn" class="<?= $_SESSION['user_img'] != '' ? 'img' : 'profile icon white no-hover' ?>">
-                <?php if ($_SESSION['user_img'] != '') { ?>
-                    <img class="profile-img" src="<?= $_SESSION['user_img'] ?>" alt="" width="40">
-                <?php }
-                ?>
-                <span><?= $_SESSION['user_first_name'] ?></span>
-                <span class="arrow-down icon white no-hover"></span>
-            </button>
+            <div class="profile-menu-wrapper">
+                <button id="profile-btn" class="<?= $_SESSION['user_img'] != '' ? 'img' : 'profile icon white no-hover' ?>">
+                    <?php if ($_SESSION['user_img'] != '') { ?>
+                        <img class="profile-img" src="<?= $_SESSION['user_img'] ?>" alt="" width="40">
+                    <?php }
+                    ?>
+                    <span><?= $_SESSION['user_first_name'] ?></span>
+                    <span class="arrow-down icon white no-hover"></span>
+                </button>
+                <div class="profile-menu">
+                    <a href="">Your Trips</a>
+                    <a href="">Help/FAQ</a>
+                    <a href="">Your Account</a>
+                </div>
+            </div>
         <?php }
         ini_set('display_errors', 1); ?>
         <a href="">English</a>
