@@ -14,7 +14,7 @@ require_once '../partials/top-header.php'
 <div id="main-wrapper">
     <main>
         <h1 class="section-title">Welcome! Find a flexible flight for your next trip.</h1>
-        <div id="search-flights">
+        <div id="search-flights" data-component="search-flights">
             <form id="search-form">
                 <div id="form-inputs-wrapper">
                     <div id="from-to-wrapper">

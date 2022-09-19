@@ -1,4 +1,4 @@
-<header id="side-header">
+<header id="side-header" data-component="side-nav">
     <?php $current_uri = strtok($_SERVER['REQUEST_URI'], '?') ?>
     <nav id="side-nav">
         <button class="icon menu lila" id="toggle-menu-btn" aria-label="Toggle side menu"></button>
