@@ -2,11 +2,17 @@
     <?php $current_uri = strtok($_SERVER['REQUEST_URI'], '?') ?>
     <nav id="side-nav">
         <button class="icon menu lila" id="toggle-menu-btn" aria-label="Toggle side menu"></button>
-        <ul>
-            <li>
-                <a class="side-nav-link icon profile lila <?= $current_uri == '/sign-in' ? 'active' : '' ?>" href="/sign-in"><span class="link-text">Sign in</span></a>
-            </li>
-        </ul>
+        <?php
+        ini_set('display_errors', 0);
+        if (!$_SESSION) { ?>
+            <ul>
+                <li>
+                    <a class="side-nav-link icon profile lila <?= $current_uri == '/sign-in' ? 'active' : '' ?>" href="/sign-in"><span class="link-text">Sign in</span></a>
+                </li>
+            </ul>
+        <?php };
+        ini_set('display_errors', 1);
+        ?>
         <ul>
             <li><a class="side-nav-link plane icon lila <?= $current_uri == '/' ? 'active' : '' ?>" href="/"><span class="link-text">Flights</span></a></li>
             <li><a class="side-nav-link bed icon lila <?= $current_uri == '/stays' ? 'active' : '' ?>" href="/stays"><span class="link-text">Stays</span></a></li>
