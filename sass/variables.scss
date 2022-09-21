@@ -55,6 +55,8 @@ $icon-size-md-rem: 1.8rem;
 $duration-fast: 0.15s;
 $duration-mid: 0.3s;
 
+$z-modal: 999;
+
 @mixin mq-xxs {
   @media (min-width: 375px) {
     @content;
