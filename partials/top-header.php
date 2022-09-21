@@ -29,7 +29,7 @@
                     <a class="profile-menu-item" href="">Your Trips</a>
                     <a class="profile-menu-item" href="">Help/FAQ</a>
                     <a class="profile-menu-item" href="">Your Account</a>
-                    <a id="log-out-btn" href="/logout">Log out</a>
+                    <a id="log-out-btn" href="/log-out">Log out</a>
                 </div>
             </div>
         <?php }

@@ -20,6 +20,11 @@ ErrorDocument 404                   /views/404.php
 #RewriteRule ^api-get-cities$        api/api-get-cities.php [NC,L]
 #RewriteRule ^api-get-flights$       api/api-get-flights.php [NC,L]
 
+RewriteRule ^log-out$               /bridge/log-out.php [NC,L]
+
+
+
+
 #Scripts
 RewriteRule ^app.js$                /js/app.js [NC,L]
 

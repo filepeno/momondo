@@ -61,7 +61,7 @@ export default class SignIn {
     } else {
       const data = await resp.json();
       console.log("success! user: ", data);
-      location.href = "/user-page";
+      location.href = "/";
     }
   }
 }
