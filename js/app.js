@@ -4,6 +4,7 @@ import SideNav from "./js/components/side-nav.js";
 import SearchFlights from "./js/components/search.js";
 import FormValidation from "./js/components/form-validation.js";
 import SignIn from "./js/components/sign-in.js";
+import TopHeader from "./js/components/top-header.js";
 
 const components = [
   //{ Class: App, selectorName: "app" },
@@ -11,6 +12,7 @@ const components = [
   { Class: SearchFlights, selectorName: "search-flights" },
   { Class: FormValidation, selectorName: "form-validation" },
   { Class: SignIn, selectorName: "sign-in" },
+  { Class: TopHeader, selectorName: "top-header" },
 ];
 
 class ComponentInstantiator {

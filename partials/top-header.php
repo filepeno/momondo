@@ -1,4 +1,4 @@
-<div id="top-header">
+<div id="top-header" data-component="top-header">
     <a href="/" aria-label="Home">
         <div class="logo">
 
@@ -25,10 +25,11 @@
                     <span><?= $_SESSION['user_first_name'] ?></span>
                     <span class="arrow-down icon white no-hover"></span>
                 </button>
-                <div class="profile-menu">
-                    <a href="">Your Trips</a>
-                    <a href="">Help/FAQ</a>
-                    <a href="">Your Account</a>
+                <div id="profile-menu">
+                    <a class="profile-menu-item" href="">Your Trips</a>
+                    <a class="profile-menu-item" href="">Help/FAQ</a>
+                    <a class="profile-menu-item" href="">Your Account</a>
+                    <a id="log-out-btn" href="/logout">Log out</a>
                 </div>
             </div>
         <?php }
