@@ -45,11 +45,11 @@ export default class SignIn {
     }
   }
 
-  displayPasswordForm(userEmail) {
+  displayPasswordForm(email) {
     this.emailForm.classList.add("inactive");
     this.passwordForm.classList.remove("inactive");
-    this.passwordForm.querySelector("label span").textContent = userEmail;
-    this.passwordForm.querySelector("[name=user_email]").value = userEmail;
+    this.passwordForm.querySelector("label span").textContent = email;
+    this.passwordForm.querySelector("[name=user_email]").value = email;
     this.passwordForm.querySelector("button[type=submit]").addEventListener("click", () => {
       if (this.checkValidity()) {
         this.matchPasswords();
@@ -75,12 +75,31 @@ export default class SignIn {
   }
 
   displaySignUpForm(email) {
-    console.log("sign up", email);
     this.emailForm.classList.add("inactive");
     this.signUpForm.classList.remove("inactive");
     const subHeading = this.el.querySelector("#sign-up-heading");
     subHeading.style.display = "block";
     subHeading.querySelector(".emphasize").textContent = email;
+    this.signUpForm.querySelector("[name=user_email]").value = email;
     this.heading.textContent = "Create and account";
+    this.signUpForm.querySelector("button[type=submit]").addEventListener("click", () => {
+      if (this.checkValidity()) {
+        this.signUp();
+      }
+    });
+  }
+
+  async signUp() {
+    const resp = await fetch("api/api-sign-up.php", {
+      method: "POST",
+      body: new FormData(this.signUpForm),
+    });
+    if (!resp.ok) {
+      const error = await resp.json();
+      console.log("error", error);
+    } else {
+      const data = await resp.json();
+      console.log("success! user: ", data);
+    }
   }
 }

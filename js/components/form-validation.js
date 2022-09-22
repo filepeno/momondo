@@ -25,12 +25,21 @@ export default class FormValidation {
 
   validate(element) {
     element.classList.remove("invalid");
+    let re;
     switch (element.getAttribute("data-validate")) {
       case "str":
+        if (element.name == "user_first_name" || element.name == "user_last_name") {
+          re = /^[a-zA-Z]+$/;
+          if (!re.test(element.value)) {
+            element.classList.add("invalid");
+            displayValidationMsg(element, false, `${element.previousElementSibling.textContent} has to contain only letters`);
+          }
+        }
         if (element.value.length < parseInt(element.dataset.min) || element.value.length > parseInt(element.dataset.max)) {
           element.classList.add("invalid");
           displayValidationMsg(element, false, `${element.previousElementSibling.textContent} has to contain at least ${element.dataset.min} and less than ${element.dataset.max} characters`);
-        } else {
+        }
+        if (!element.classList.contains("invalid")) {
           if (element.classList.contains("try-again")) {
             displayValidationMsg(element, true, `${element.previousElementSibling.textContent} ok`);
           }
@@ -42,7 +51,7 @@ export default class FormValidation {
         }
         break;
       case "email":
-        let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!re.test(element.value.toLowerCase())) {
           element.classList.add("invalid");
           displayValidationMsg(element, false, "Email address is not valid");
@@ -53,7 +62,7 @@ export default class FormValidation {
         }
         break;
       case "regex":
-        var regex = new RegExp(element.getAttribute("data-regex"));
+        let regex = new RegExp(element.getAttribute("data-regex"));
         // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
         if (!regex.test(element.value)) {
           console.log("regex error");
@@ -64,6 +73,10 @@ export default class FormValidation {
         if (element.value != this.el.querySelector(`[name='${element.getAttribute("data-match-name")}']`).value) {
           element.classList.add("invalid");
           displayValidationMsg(element, false, `The ${element.type} does not match`);
+        } else {
+          if (element.classList.contains("try-again")) {
+            displayValidationMsg(element, true, `The ${element.type} matches`);
+          }
         }
         break;
     }

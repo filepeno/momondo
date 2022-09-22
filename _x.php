@@ -4,6 +4,8 @@ define('_USER_FIRST_NAME_MAX_LEN', 10);
 define('_USER_LAST_NAME_MIN_LEN', 1);
 define('_USER_LAST_NAME_MAX_LEN', 15);
 
+define('_REGEX_STRING', '/^[a-zA-Z]+$/');
+
 define('_REGEX_EMAIL', '/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/');
 
 define('_USER_PASSWORD_MIN_LEN', 5);
@@ -14,24 +16,27 @@ define('_USER_PASSWORD_MAX_LEN', 10);
 // ##############################
 function _validate_user_first_name()
 {
-  $error_message = 'user_name min ' . _USER_FIRST_NAME_MIN_LEN . ' max ' . _USER_FIRST_NAME_MAX_LEN . ' characters';
-  if (!isset($_POST['user_name'])) {
+  $error_message = 'First name has to be min ' . _USER_FIRST_NAME_MIN_LEN . ' max ' . _USER_FIRST_NAME_MAX_LEN . ' characters';
+  if (!isset($_POST['user_first_name'])) {
     _respond($error_message, 400);
   }
-  $_POST['user_name'] = trim($_POST['user_name']);
-  if (strlen($_POST['user_name']) < _USER_FIRST_NAME_MIN_LEN) {
+  $_POST['user_first_name'] = trim($_POST['user_first_name']);
+  if (!preg_match(_REGEX_STRING, $_POST['user_first_name'])) {
     _respond($error_message, 400);
   }
-  if (strlen($_POST['user_name']) > _USER_FIRST_NAME_MAX_LEN) {
+  if (strlen($_POST['user_first_name']) < _USER_FIRST_NAME_MIN_LEN) {
     _respond($error_message, 400);
   }
-  return $_POST['user_name'];
+  if (strlen($_POST['user_first_name']) > _USER_FIRST_NAME_MAX_LEN) {
+    _respond($error_message, 400);
+  }
+  return $_POST['user_first_name'];
 }
 
 // ##############################
 function _validate_user_last_name()
 {
-  $error_message = 'user_last_name min ' . _USER_LAST_NAME_MIN_LEN . ' max ' . _USER_LAST_NAME_MAX_LEN . ' characters';
+  $error_message = 'Last name has to be min ' . _USER_LAST_NAME_MIN_LEN . ' max ' . _USER_LAST_NAME_MAX_LEN . ' characters';
   if (!isset($_POST['user_last_name'])) {
     _respond($error_message, 400);
   }
