@@ -38,6 +38,10 @@
     label {
       font-family: $ff-light;
     }
+
+    button[type="submit"] {
+      margin-top: $gutter-xs;
+    }
   }
 
   .input-wrapper.invalid .sign-in-input:focus {
