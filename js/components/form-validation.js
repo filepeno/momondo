@@ -27,10 +27,13 @@ export default class FormValidation {
     element.classList.remove("invalid");
     switch (element.getAttribute("data-validate")) {
       case "str":
-        if (element.value.length < parseInt(element.getAttribute("data-min")) || element.value.length > parseInt(element.getAttribute("data-max"))) {
+        if (element.value.length < parseInt(element.dataset.min) || element.value.length > parseInt(element.dataset.max)) {
           element.classList.add("invalid");
-          if (element.name == "user_password") {
-            displayValidationMsg(element, false, "Password is not valid");
+
+          displayValidationMsg(element, false, `The length has to be more than ${element.dataset.min} and less than ${element.dataset.max} characters`);
+        } else {
+          if (element.classList.contains("try-again")) {
+            displayValidationMsg(element, true, "Length ok");
           }
         }
         break;
@@ -47,14 +50,6 @@ export default class FormValidation {
         } else {
           if (element.classList.contains("try-again")) {
             displayValidationMsg(element, true, "Email address is valid");
-            element.classList.remove("try-again");
-            element.addEventListener(
-              "blur",
-              (e) => {
-                hideValidationMsg(e.target);
-              },
-              { once: true }
-            );
           }
         }
         break;
@@ -87,6 +82,16 @@ export default class FormValidation {
     } else {
       element.classList.remove("invalid");
       //hideValidationMsg(element);
+      if (element.classList.contains("try-again")) {
+        element.classList.remove("try-again");
+        element.addEventListener(
+          "blur",
+          (e) => {
+            hideValidationMsg(e.target);
+          },
+          { once: true }
+        );
+      }
     }
   }
 

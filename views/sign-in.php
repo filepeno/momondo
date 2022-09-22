@@ -47,8 +47,8 @@ require_once '../partials/top-header.php'
             </form>
 
             <!-- SIGN-UP-FORM-->
-            <h2 style="display:none" id="sign-up-heading" class="type-light">Create an account for email <span class="emphasize">*email*<span></h2>
-            <form id="sign-up-form" class="inactive" onsubmit="return false" data-component="form-validation">
+            <h2 style="display:none" id="sign-up-heading" class="type-light">Create an account for <span class="emphasize">*email*<span></h2>
+            <form id="sign-up-form" class="" onsubmit="return false" data-component="form-validation">
                 <input style="display:none" type="text" name="user_email">
                 <div class="input-wrapper">
                     <label for="user_first_name">First name</label>
@@ -62,7 +62,7 @@ require_once '../partials/top-header.php'
                 </div>
                 <div class="input-wrapper">
                     <label for="user_password">Password</label>
-                    <input class="sign-in-input" data-validate="str" type="text" name="user_password">
+                    <input class="sign-in-input" data-validate="str" data-min="<?= _USER_PASSWORD_MIN_LEN ?>" data-max="<?= _USER_PASSWORD_MAX_LEN ?>" maxlength="<?= _USER_PASSWORD_MAX_LEN ?>" type="password" name="user_password">
                     <p class="validation-msg"></p>
                 </div>
                 <div class="input-wrapper">
