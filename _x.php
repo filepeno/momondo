@@ -1,8 +1,8 @@
 <?php
 define('_USER_FIRST_NAME_MIN_LEN', 1);
-define('_USER_FIRST_NAME_MAX_LEN', 3);
+define('_USER_FIRST_NAME_MAX_LEN', 10);
 define('_USER_LAST_NAME_MIN_LEN', 1);
-define('_USER_LAST_NAME_MAX_LEN', 5);
+define('_USER_LAST_NAME_MAX_LEN', 15);
 
 define('_REGEX_EMAIL', '/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/');
 

@@ -67,7 +67,7 @@ require_once '../partials/top-header.php'
                 </div>
                 <div class="input-wrapper">
                     <label for="user_password_repeat">Repeat password</label>
-                    <input class="sign-in-input" data-validate="match" type="text" name="user_password_repeat">
+                    <input class="sign-in-input" data-validate="match" data-match-name="user_password" type="password" name="user_password_repeat">
                     <p class="validation-msg"></p>
                 </div>
                 <button class="continue-btn gradient-btn" type="submit">Sign up</button>
