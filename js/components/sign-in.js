@@ -27,7 +27,7 @@ export default class SignIn {
   }
 
   async getUsers() {
-    const resp = await fetch("api/api-check-user-existence.php", {
+    const resp = await fetch("api/api-sign-in.php", {
       method: "POST",
       body: new FormData(this.emailForm),
     });
