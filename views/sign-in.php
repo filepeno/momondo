@@ -52,12 +52,12 @@ require_once '../partials/top-header.php'
                 <input style="display:none" type="text" name="user_email">
                 <div class="input-wrapper">
                     <label for="user_first_name">First name</label>
-                    <input class="sign-in-input" data-validate="str" type="text" name="user_first_name">
+                    <input class="sign-in-input" data-validate="str" data-min="<?= _USER_FIRST_NAME_MIN_LEN ?>" data-max="<?= _USER_FIRST_NAME_MAX_LEN ?>" maxlength="<?= _USER_FIRST_NAME_MAX_LEN ?>" type="text" name="user_first_name">
                     <p class="validation-msg"></p>
                 </div>
                 <div class="input-wrapper">
                     <label for="user_last_name">Last name</label>
-                    <input class="sign-in-input" data-validate="str" type="text" name="user_last_name">
+                    <input class="sign-in-input" data-validate="str" data-min="<?= _USER_LAST_NAME_MIN_LEN ?>" data-max="<?= _USER_LAST_NAME_MAX_LEN ?>" maxlength="<?= _USER_LAST_NAME_MAX_LEN ?>" type="text" name="user_last_name">
                     <p class="validation-msg"></p>
                 </div>
                 <div class="input-wrapper">

@@ -29,8 +29,7 @@ export default class FormValidation {
       case "str":
         if (element.value.length < parseInt(element.dataset.min) || element.value.length > parseInt(element.dataset.max)) {
           element.classList.add("invalid");
-
-          displayValidationMsg(element, false, `The length has to be more than ${element.dataset.min} and less than ${element.dataset.max} characters`);
+          displayValidationMsg(element, false, `Length has to be at least ${element.dataset.min} and less than ${element.dataset.max} characters`);
         } else {
           if (element.classList.contains("try-again")) {
             displayValidationMsg(element, true, "Length ok");
@@ -49,7 +48,7 @@ export default class FormValidation {
           displayValidationMsg(element, false, "Email address is not valid");
         } else {
           if (element.classList.contains("try-again")) {
-            displayValidationMsg(element, true, "Email address is valid");
+            displayValidationMsg(element, true, "Email address ok");
           }
         }
         break;

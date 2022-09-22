@@ -1,6 +1,6 @@
 <?php
-define('_USER_NAME_MIN_LEN', 1);
-define('_USER_NAME_MAX_LEN', 3);
+define('_USER_FIRST_NAME_MIN_LEN', 1);
+define('_USER_FIRST_NAME_MAX_LEN', 3);
 define('_USER_LAST_NAME_MIN_LEN', 1);
 define('_USER_LAST_NAME_MAX_LEN', 5);
 
@@ -12,17 +12,17 @@ define('_USER_PASSWORD_MAX_LEN', 10);
 
 
 // ##############################
-function _validate_user_name()
+function _validate_user_first_name()
 {
-  $error_message = 'user_name min ' . _USER_NAME_MIN_LEN . ' max ' . _USER_NAME_MAX_LEN . ' characters';
+  $error_message = 'user_name min ' . _USER_FIRST_NAME_MIN_LEN . ' max ' . _USER_FIRST_NAME_MAX_LEN . ' characters';
   if (!isset($_POST['user_name'])) {
     _respond($error_message, 400);
   }
   $_POST['user_name'] = trim($_POST['user_name']);
-  if (strlen($_POST['user_name']) < _USER_NAME_MIN_LEN) {
+  if (strlen($_POST['user_name']) < _USER_FIRST_NAME_MIN_LEN) {
     _respond($error_message, 400);
   }
-  if (strlen($_POST['user_name']) > _USER_NAME_MAX_LEN) {
+  if (strlen($_POST['user_name']) > _USER_FIRST_NAME_MAX_LEN) {
     _respond($error_message, 400);
   }
   return $_POST['user_name'];
