@@ -70,7 +70,7 @@ export default class FormValidation {
 
     /* check if valid */
     if (element.classList.contains("invalid")) {
-      element.focus();
+      //element.focus();
       element.classList.add("try-again");
       element.addEventListener(
         "input",
