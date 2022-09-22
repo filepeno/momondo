@@ -47,6 +47,14 @@ export default class FormValidation {
         } else {
           if (element.classList.contains("try-again")) {
             displayValidationMsg(element, true, "Email address is valid");
+            element.classList.remove("try-again");
+            element.addEventListener(
+              "blur",
+              (e) => {
+                hideValidationMsg(e.target);
+              },
+              { once: true }
+            );
           }
         }
         break;
