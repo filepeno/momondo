@@ -25,7 +25,7 @@
     width: 100%;
     //max-width: $max-width-xs;
     @include flex-column-center;
-    gap: $gutter-xs;
+    gap: 0.6rem;
 
     &.inactive {
       display: none;
@@ -38,6 +38,15 @@
     label {
       font-family: $ff-light;
     }
+  }
+
+  .input-wrapper.invalid .sign-in-input:focus {
+    box-shadow: 0 3px 5px 0 rgb(233 160 166);
+    border-bottom: 2px solid #bf81c7;
+  }
+  .input-wrapper.valid .sign-in-input:focus {
+    box-shadow: 0 3px 5px 0 rgb(134 215 215);
+    border-bottom: 2px solid #66cda7;
   }
 
   .sign-in-input {
