@@ -4,6 +4,11 @@ $page_href = '/sign-in';
 $page_id = 'sign-in-page';
 require_once '../partials/html-head.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/_x.php';
+
+if ($_SESSION) {
+    Header('Location: /');
+    exit();
+}
 ?>
 
 <?php

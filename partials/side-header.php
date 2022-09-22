@@ -3,8 +3,6 @@
     <nav id="side-nav">
         <button class="icon menu lila" id="toggle-menu-btn" aria-label="Toggle side menu"></button>
         <?php
-        ini_set('display_errors', 0);
-        session_start();
         if (!$_SESSION) { ?>
             <ul>
                 <li>
@@ -12,7 +10,6 @@
                 </li>
             </ul>
         <?php };
-        ini_set('display_errors', 1);
         ?>
         <ul>
             <li><a class="side-nav-link plane icon lila <?= $current_uri == '/' ? 'active' : '' ?>" href="/"><span class="link-text">Flights</span></a></li>

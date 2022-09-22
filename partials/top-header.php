@@ -9,8 +9,6 @@
         <a class="header-link <?= $page_href == '/contact-us' ? 'active' : '' ?>" href="/contact-us">Contact us</a>-->
         <a class="header-link <?= $page_href == '/trips' ? 'active' : '' ?>" href="/trips">Trips</a>
         <?php
-        ini_set('display_errors', 0);
-        session_start();
         if (!$_SESSION) {
         ?>
             <a class="profile icon white" id="log-in-btn" href="/sign-in">Sign in</a>
@@ -33,7 +31,7 @@
                 </div>
             </div>
         <?php }
-        ini_set('display_errors', 1); ?>
+        ?>
         <a href="">English</a>
     </div>
 </div>
