@@ -29,7 +29,9 @@ export default class FormValidation {
       case "str":
         if (element.value.length < parseInt(element.getAttribute("data-min")) || element.value.length > parseInt(element.getAttribute("data-max"))) {
           element.classList.add("invalid");
-          displayValidationMsg(element, false, "Password is not valid");
+          if (element.name == "user_password") {
+            displayValidationMsg(element, false, "Password is not valid");
+          }
         }
         break;
       case "int":
@@ -42,13 +44,16 @@ export default class FormValidation {
         if (!re.test(element.value.toLowerCase())) {
           element.classList.add("invalid");
           displayValidationMsg(element, false, "Email address is not valid");
+        } else {
+          if (element.classList.contains("try-again")) {
+            displayValidationMsg(element, true, "Email address is valid");
+          }
         }
         break;
       case "regex":
         var regex = new RegExp(element.getAttribute("data-regex"));
         // var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
         if (!regex.test(element.value)) {
-          console.log(element.value);
           console.log("regex error");
           element.classList.add("invalid");
         }
@@ -59,18 +64,21 @@ export default class FormValidation {
         }
         break;
     }
+
+    /* check if valid */
     if (element.classList.contains("invalid")) {
       element.focus();
+      element.classList.add("try-again");
       element.addEventListener(
         "input",
-        () => {
-          this.validate(element);
+        (e) => {
+          this.validate(e.target);
         },
         { once: true }
       );
     } else {
       element.classList.remove("invalid");
-      hideValidationMsg(element);
+      //hideValidationMsg(element);
     }
   }
 
