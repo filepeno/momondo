@@ -1,6 +1,6 @@
 footer {
-  grid-area: 2 / 2 / 3 / 3;
-  margin-top: auto;
+  //grid-area: 2 / 2 / 3 / 3;
+  margin-top: $gutter-lg;
   background-color: $clr-dark-blue;
   padding: 50px 16px;
 }

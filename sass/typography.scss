@@ -12,7 +12,6 @@ h2,
 h3,
 .h3 {
   font-family: $ff-display;
-  margin-bottom: $gutter-sm;
 }
 
 p {
@@ -25,4 +24,13 @@ ul {
 
 .section-title {
   margin-bottom: $gutter-sm;
+}
+
+.type-light {
+  font-family: $ff-light;
+  font-weight: 300;
+}
+
+.emphasize {
+  font-family: $ff-medium;
 }

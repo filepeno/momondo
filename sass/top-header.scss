@@ -1,7 +1,10 @@
 @import "variables";
 
 #top-header {
-  grid-area: 1 / 2 / 2 / 3;
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+  //grid-area: 1 / 2 / 2 / 3;
   padding: $gutter-sm $gutter-md;
   width: 100%;
   display: flex;

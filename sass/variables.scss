@@ -57,6 +57,7 @@ $duration-fast: 0.15s;
 $duration-mid: 0.3s;
 
 $z-modal: 999;
+$z-header: 9999;
 
 @mixin mq-xxs {
   @media (min-width: 375px) {

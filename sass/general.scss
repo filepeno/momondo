@@ -9,18 +9,22 @@
 body {
   display: grid;
   grid-template-columns: min-content 1fr;
-  row-gap: $gutter-lg;
   width: 100%;
   background-color: $clr-mid-blue;
   overflow-y: scroll;
 }
 
+#site-wrapper {
+  position: relative;
+}
+
 #main-wrapper {
-  grid-area: 2 / 2 / 2 / 3;
+  //grid-area: 2 / 2 / 2 / 3;
   padding: 0 $gutter-md;
   max-width: 100%;
   min-height: 100vh;
-  margin: auto;
+  margin: 0 auto;
+  margin-top: $gutter-lg;
 }
 
 main {

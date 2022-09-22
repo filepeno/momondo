@@ -34,6 +34,9 @@ function _check_user_existense($email)
         }
     }
     http_response_code(400);
-    echo json_encode(['info' => 'user does not exist']);
+    echo json_encode([
+        'info' => 'user does not exist',
+        'email' => $email
+    ]);
     exit();
 }

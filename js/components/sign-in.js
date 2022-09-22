@@ -3,17 +3,18 @@ import { displayValidationMsg, hideValidationMsg } from "./form-validation.js";
 export default class SignIn {
   constructor(element) {
     this.el = element;
-    this.emailForm = this.el.form;
-    this.inputs = this.emailForm.querySelectorAll("[data-validate]");
-
-    /*     this.email = this.emailForm.querySelector("input[name=email]").value; */
-    this.passwordForm = document.querySelector("#password-form");
+    this.emailForm = this.el.querySelector("#email-form");
+    this.emailSubmitBtn = this.emailForm.querySelector("[type=submit]");
+    this.heading = this.el.querySelector(".section-title");
+    /*   this.inputs = this.emailForm.querySelectorAll("[data-validate]"); */
+    this.passwordForm = this.el.querySelector("#log-in-form");
     this.passwordInput = this.passwordForm.querySelector("input[name=user_password]");
+    this.signUpForm = this.el.querySelector("#sign-up-form");
     this.init();
   }
 
   init() {
-    this.el.addEventListener("click", () => {
+    this.emailSubmitBtn.addEventListener("click", () => {
       if (this.checkValidity()) {
         this.getUsers();
       }
@@ -34,8 +35,10 @@ export default class SignIn {
       body: new FormData(this.emailForm),
     });
     if (!resp.ok) {
-      console.log(await resp.json());
-      //TODO: display sign up view
+      const error = await resp.json();
+      if (error.info == "user does not exist") {
+        this.displaySignUpForm(error.email);
+      }
     } else {
       const userEmail = await resp.json();
       this.displayPasswordForm(userEmail);
@@ -53,6 +56,7 @@ export default class SignIn {
       }
     });
   }
+
   async matchPasswords() {
     const resp = await fetch("api/api-match-user-password.php", {
       method: "POST",
@@ -60,7 +64,6 @@ export default class SignIn {
     });
     if (!resp.ok) {
       const error = await resp.json();
-      console.log(error);
       if (error.info == "The password did not match") {
         displayValidationMsg(this.passwordInput, false, error.info);
       }
@@ -69,5 +72,15 @@ export default class SignIn {
       console.log("success! user: ", data);
       location.href = "/";
     }
+  }
+
+  displaySignUpForm(email) {
+    console.log("sign up", email);
+    this.emailForm.classList.add("inactive");
+    this.signUpForm.classList.remove("inactive");
+    const subHeading = this.el.querySelector("#sign-up-heading");
+    subHeading.style.display = "block";
+    subHeading.querySelector(".emphasize").textContent = email;
+    this.heading.textContent = "Create and account";
   }
 }

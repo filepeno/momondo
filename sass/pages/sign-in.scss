@@ -23,7 +23,7 @@
 
   form {
     width: 100%;
-    max-width: $max-width-xs;
+    //max-width: $max-width-xs;
     @include flex-column-center;
     gap: $gutter-xs;
 
@@ -37,12 +37,6 @@
 
     label {
       font-family: $ff-light;
-      span {
-        font-family: $ff-medium;
-      }
-    }
-
-    #user-email {
     }
   }
 
@@ -53,5 +47,9 @@
       box-shadow: 0 3px 5px 0 $clr-light-blue;
       border-bottom: 2px solid #2540a4;
     }
+  }
+
+  #sign-up-heading {
+    width: 100%;
   }
 }
