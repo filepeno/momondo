@@ -11,9 +11,7 @@ input {
   font-family: $ff-light;
   outline: none;
   padding: $gutter-xs;
-  &.invalid {
-    background-color: $clr-util-invalid-input;
-  }
+
   &[type="password"] {
     //font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 0.2rem;
@@ -34,6 +32,32 @@ input {
   /*  @include flex-column-center;
   align-items: left;
   gap: $gutter-xxs; */
+
+  &.valid,
+  &.invalid {
+    .validation-msg {
+      visibility: visible;
+    }
+  }
+
+  &.invalid {
+    input {
+      background-color: $clr-util-invalid-input;
+    }
+
+    .validation-msg {
+      color: $clr-util-invalid-msg;
+    }
+  }
+
+  &.valid {
+    input {
+      background-color: $clr-util-valid-input;
+    }
+    .validation-msg {
+      color: $clr-util-valid-msg;
+    }
+  }
 }
 
 .validation-msg {
@@ -41,10 +65,4 @@ input {
   font-size: $fs-sm;
   margin-top: $gutter-xxs;
   margin-left: $gutter-xs;
-  &.visible {
-    visibility: visible;
-  }
-  &.invalid {
-    color: $clr-util-invalid-msg;
-  }
 }

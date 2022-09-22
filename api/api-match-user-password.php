@@ -11,7 +11,7 @@ $input_password = _validate_user_password();
 
 if ($user['user_password'] != $input_password) {
     http_response_code(400);
-    echo json_encode(['info' => 'password did not match']);
+    echo json_encode(['info' => 'The password did not match']);
     exit();
 }
 

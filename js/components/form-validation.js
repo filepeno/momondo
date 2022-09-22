@@ -29,7 +29,7 @@ export default class FormValidation {
       case "str":
         if (element.value.length < parseInt(element.getAttribute("data-min")) || element.value.length > parseInt(element.getAttribute("data-max"))) {
           element.classList.add("invalid");
-          this.displayValidationMsg(element, false, "Password is not valid");
+          displayValidationMsg(element, false, "Password is not valid");
         }
         break;
       case "int":
@@ -41,7 +41,7 @@ export default class FormValidation {
         let re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (!re.test(element.value.toLowerCase())) {
           element.classList.add("invalid");
-          this.displayValidationMsg(element, false, "Email address is not valid");
+          displayValidationMsg(element, false, "Email address is not valid");
         }
         break;
       case "regex":
@@ -61,9 +61,16 @@ export default class FormValidation {
     }
     if (element.classList.contains("invalid")) {
       element.focus();
-      element.addEventListener("input", () => this.validate(element));
+      element.addEventListener(
+        "input",
+        () => {
+          this.validate(element);
+        },
+        { once: true }
+      );
     } else {
-      this.hideValidationMsg(element);
+      element.classList.remove("invalid");
+      hideValidationMsg(element);
     }
   }
 
@@ -72,20 +79,24 @@ export default class FormValidation {
     // event.target.classList.remove("invalid")
     // event.target.value = ""
   }
-
-  displayValidationMsg(el, bool, msg) {
-    const msgEl = el.closest(".input-wrapper").querySelector(".validation-msg");
-    msgEl.classList.add("visible");
-    if (!bool) {
-      msgEl.classList.add("invalid");
-    }
-    msgEl.textContent = msg;
-  }
-
-  hideValidationMsg(element) {
-    element.classList.remove("invalid");
-    element.closest(".input-wrapper").querySelector(".validation-msg").classList.remove("visible");
-  }
 }
 
 // ##############################
+
+export function displayValidationMsg(el, IsValid, msg) {
+  const wrapper = el.closest(".input-wrapper");
+  if (!IsValid) {
+    wrapper.classList.add("invalid");
+    wrapper.classList.remove("valid");
+  } else {
+    wrapper.classList.remove("invalid");
+    wrapper.classList.add("valid");
+  }
+  const msgEl = wrapper.querySelector(".validation-msg");
+  msgEl.textContent = msg;
+}
+
+export function hideValidationMsg(el) {
+  const wrapper = el.closest(".input-wrapper");
+  wrapper.classList.remove("invalid", "valid");
+}

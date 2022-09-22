@@ -1,3 +1,5 @@
+import { displayValidationMsg, hideValidationMsg } from "./form-validation.js";
+
 export default class SignIn {
   constructor(element) {
     this.el = element;
@@ -57,7 +59,11 @@ export default class SignIn {
       body: new FormData(this.passwordForm),
     });
     if (!resp.ok) {
-      console.log(await resp.json());
+      const error = await resp.json();
+      console.log(error);
+      if (error.info == "The password did not match") {
+        displayValidationMsg(this.passwordInput, false, error.info);
+      }
     } else {
       const data = await resp.json();
       console.log("success! user: ", data);
