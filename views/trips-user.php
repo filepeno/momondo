@@ -1,7 +1,6 @@
 <?php
 
 $page_title = 'My trips';
-$page_href = '/trips';
 $page_id = 'trips-page';
 require_once '../partials/html-head.php';
 
