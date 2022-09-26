@@ -27,6 +27,7 @@
                         <a class="profile-menu-item" href="/trips">Your Trips</a>
                         <a class="profile-menu-item" href="">Help/FAQ</a>
                         <a class="profile-menu-item" href="">Your Account</a>
+                        <a class="profile-menu-item" href="/admin">Flights</a>
                         <a id="log-out-btn" href="/log-out">Log out</a>
                     </div>
                 </div>

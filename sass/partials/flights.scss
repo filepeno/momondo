@@ -1,0 +1,40 @@
+@import "../variables";
+
+.flights {
+  @include flex-column-center;
+  gap: $gutter-sm;
+}
+
+.flight-wrapper {
+  width: 100%;
+  max-width: $max-width-md;
+  display: flex;
+  gap: $gutter-xs;
+
+  .flight-content {
+    display: flex;
+    width: inherit;
+    background-color: $clr-main;
+    color: $clr-black;
+    border-radius: $br-sm;
+
+    .flight-main-info {
+      display: flex;
+      width: inherit;
+      padding: $gutter-xs;
+
+      .airline-logo {
+        height: fit-content;
+        max-width: 50px;
+      }
+    }
+
+    .flight-price-wrapper {
+      padding: $gutter-xs;
+    }
+  }
+
+  .delete-flight-btn {
+    padding: $gutter-xs;
+  }
+}
