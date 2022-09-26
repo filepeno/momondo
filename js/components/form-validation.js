@@ -32,12 +32,12 @@ export default class FormValidation {
           re = /^[a-zA-Z]+$/;
           if (!re.test(element.value)) {
             element.classList.add("invalid");
-            displayValidationMsg(element, false, `${element.previousElementSibling.textContent} has to contain only letters`);
+            displayValidationMsg(element, false, `${element.previousElementSibling.textContent} must contain only letters`);
           }
         }
         if (element.value.length < parseInt(element.dataset.min) || element.value.length > parseInt(element.dataset.max)) {
           element.classList.add("invalid");
-          displayValidationMsg(element, false, `${element.previousElementSibling.textContent} has to contain at least ${element.dataset.min} and less than ${element.dataset.max} characters`);
+          displayValidationMsg(element, false, `${element.previousElementSibling.textContent} must contain at least ${element.dataset.min} and less than ${element.dataset.max} characters`);
         }
         if (!element.classList.contains("invalid")) {
           if (element.classList.contains("try-again")) {

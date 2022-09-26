@@ -100,6 +100,16 @@ export default class SignIn {
     } else {
       const data = await resp.json();
       console.log("success! user: ", data);
+      Swal.fire({
+        title: "Sign-up succesful",
+        text: `Hi ${data.user_first_name}, thank you for signing up to Momondo.`,
+        icon: "success",
+        confirmButtonText: "Finish",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = "/";
+        }
+      });
     }
   }
 }
