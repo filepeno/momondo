@@ -1,0 +1,4 @@
+id,departure_city,departure_airport_code,departure_time,departure_airport_name,arrival_city,arrival_airport_code,arrival_time,arrival_airport_name,airline_name,ticket_price,airline_image
+1,Copenhagen,CPH,2020-04-26T07:00,Kastrup,Helsinki,HEL,2020-04-26T10:00,Helsinki-Vantaa,SAS,200 kr.,sas.png
+2,Helsinki,HEL,2022-04-26T07:00,Helsinki-Vantaa,Copenhagen,CPH,2022-05-26T09:00,Kastrup,Finnair,799 kr.,finnair.png
+3,London,LUT,2022-04-26T05:45,London Luton,Helsinki,HEL,2023-04-26T08:45,Helsinki-Vantaa,Norwegian,1.199 kr.,norwegian.png
