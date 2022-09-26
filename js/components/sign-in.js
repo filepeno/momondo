@@ -69,8 +69,14 @@ export default class SignIn {
       }
     } else {
       const data = await resp.json();
-      console.log("success! user: ", data);
-      location.href = "/";
+      console.log(data);
+      Swal.fire({
+        title: `Hi again, ${data.info.user_first_name}!`,
+        icon: "success",
+        confirmButtonText: "Start searching for flights",
+      }).then(() => {
+        location.href = "/";
+      });
     }
   }
 
@@ -97,18 +103,25 @@ export default class SignIn {
     if (!resp.ok) {
       const error = await resp.json();
       console.log("error", error);
-    } else {
-      const data = await resp.json();
-      console.log("success! user: ", data);
       Swal.fire({
-        title: "Sign-up succesful",
-        text: `Hi ${data.user_first_name}, thank you for signing up to Momondo.`,
-        icon: "success",
-        confirmButtonText: "Finish",
+        title: "Error",
+        text: `The system is under maintenance, try again later`,
+        icon: "error",
+        confirmButtonText: "Go to home page",
       }).then((result) => {
         if (result.isConfirmed) {
           location.href = "/";
         }
+      });
+    } else {
+      const data = await resp.json();
+      Swal.fire({
+        title: "Sign-up succesful!",
+        text: `Hi ${data.user_first_name}, thank you for signing up to Momondo.`,
+        icon: "success",
+        confirmButtonText: "Go to home page",
+      }).then(() => {
+        location.href = "/";
       });
     }
   }
