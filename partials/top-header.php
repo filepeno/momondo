@@ -7,9 +7,7 @@
             </div>
         </a>
         <div class="links">
-            <!--<a class="header-link <?= $page_href == '/about-us' ? 'active' : '' ?>" href="/about-us">About us</a>
-        <a class="header-link <?= $page_href == '/contact-us' ? 'active' : '' ?>" href="/contact-us">Contact us</a>-->
-            <a class="header-link <?= $page_href == '/trips' ? 'active' : '' ?>" href="/trips">Trips</a>
+            <a class="header-link" href="/trips">Trips</a>
             <?php
             if (!$_SESSION) {
             ?>
@@ -26,7 +24,7 @@
                         <span class="arrow-down icon white no-hover"></span>
                     </button>
                     <div id="profile-menu">
-                        <a class="profile-menu-item" href="">Your Trips</a>
+                        <a class="profile-menu-item" href="/trips">Your Trips</a>
                         <a class="profile-menu-item" href="">Help/FAQ</a>
                         <a class="profile-menu-item" href="">Your Account</a>
                         <a id="log-out-btn" href="/log-out">Log out</a>

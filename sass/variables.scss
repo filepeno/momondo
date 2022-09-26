@@ -11,6 +11,8 @@ $clr-light-pink: #e1d9e8;
 $clr-white-alpha-1: rgba(255, 255, 255, 0.7);
 $clr-hot-pink: #de1666;
 $clr-mid-purple: #73146f;
+$clr-mid-purple-2: #6b15c1;
+$clr-light-purple-2: #8124db;
 $clr-util-invalid-msg: rgb(228, 55, 72);
 $clr-util-valid-msg: rgb(83, 154, 33);
 $clr-util-invalid-input: rgba(240, 130, 240, 0.2);
@@ -23,6 +25,10 @@ $ff-light: "CeraProLight";
 $fs-sm: 0.9rem;
 $fs-md: 1rem;
 $fs-lg: 1.2rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+$fs-xxxl: 2.3rem;
+$fs-xxxxl: 2.75rem;
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -37,6 +43,7 @@ $gutter-xl: 8rem;
 $gutter-xxl: 15rem;
 
 $br-sm: 4px;
+$br-sm-rem: 0.2rem;
 
 //search
 $height-input: 3rem;
@@ -74,10 +81,23 @@ $z-header: 9999;
     @content;
   }
 }
+@mixin mq-md {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
 
 @mixin flex-row-center {
   display: flex;
   justify-content: center;
+}
+@mixin flex-row-end {
+  display: flex;
+  justify-content: flex-end;
+}
+@mixin flex-row-start {
+  display: flex;
+  justify-content: flex-start;
 }
 
 @mixin flex-column-center {
@@ -85,4 +105,12 @@ $z-header: 9999;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin absolute-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }

@@ -1,19 +1,29 @@
 <?php
+
 $page_title = 'Trips';
 $page_href = '/trips';
-require_once '../partials/html-head.php'
+$page_id = 'trips-page';
+require_once '../partials/html-head.php';
+
+if ($_SESSION) {
+    Header('Location: /my-trips');
+    exit();
+}
 ?>
 
 <?php
 require_once '../partials/side-header.php'
 ?>
 
-<main>
-    <?php
-    require_once '../partials/top-header.php'
-    ?>
-    <h1>Trips</h1>
-</main>
+<?php
+require_once '../partials/top-header.php'
+?>
+
+<div id="main-wrapper" class="">
+    <main>
+        <h1>Trips</h1>
+    </main>
+</div>
 
 <?php
 require_once '../partials/footer.php'

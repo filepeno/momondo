@@ -14,11 +14,24 @@ h3,
   font-family: $ff-display;
 }
 
+.h1 {
+  font-size: $fs-xxxxl;
+}
+
+.h2 {
+  font-size: $fs-xxl;
+}
+
+.h3 {
+  font-size: $fs-xl;
+}
+
 p {
   font-family: $ff-light;
 }
 
-ul {
+ul,
+li {
   list-style: none;
 }
 

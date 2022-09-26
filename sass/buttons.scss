@@ -1,5 +1,9 @@
 @import "variables";
 
+button {
+  cursor: pointer;
+}
+
 .gradient-btn {
   background: linear-gradient(135deg, $clr-hot-pink 0%, $clr-mid-purple 100%);
   color: $clr-main;
@@ -7,6 +11,16 @@
 
 .continue-btn {
   padding: $gutter-xs $gutter-md;
+}
+
+.purple-btn {
+  color: $clr-main;
+  background-color: $clr-mid-purple-2;
+  padding: $gutter-xs $gutter-sm;
+  border-radius: $br-sm-rem;
+  &:hover {
+    background-color: $clr-light-purple-2;
+  }
 }
 
 #toggle-menu-btn {

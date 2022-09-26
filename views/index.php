@@ -1,6 +1,7 @@
 <?php
 $page_title = 'Momondo';
 $page_href = '/';
+$page_id = 'home-page';
 require_once '../partials/html-head.php'
 ?>
 
@@ -13,7 +14,7 @@ require_once '../partials/top-header.php'
 ?>
 <div id="main-wrapper">
     <main>
-        <h1 class="section-title">Welcome! Find a flexible flight for your next trip.</h1>
+        <h1 class="section-title h2">Welcome! Find a flexible flight for your next trip.</h1>
         <div id="search-flights" data-component="search-flights">
             <form id="search-form">
                 <div id="form-inputs-wrapper">
