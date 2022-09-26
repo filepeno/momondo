@@ -58,6 +58,7 @@
     border-radius: $br-sm;
     overflow: hidden;
     z-index: $z-modal;
+    box-shadow: 0 3px 6px rgb(21 1 39 / 16%), 0 -1px 4px rgb(21 1 39 / 4%);
     @include flex-column-center;
 
     &.active {
