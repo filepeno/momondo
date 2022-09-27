@@ -6,11 +6,12 @@
 @import "general.scss";
 @import "fonts.scss";
 @import "icons.scss";
-@import "top-header.scss";
-@import "side-header.scss";
-@import "footer.scss";
 @import "search-flights.scss";
+
 @import "pages/sign-in.scss";
 @import "pages/trips.scss";
 
 @import "partials/flights.scss";
+@import "partials/footer.scss";
+@import "partials/side-header.scss";
+@import "partials/top-header.scss";
