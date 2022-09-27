@@ -35,6 +35,8 @@ export default class UploadImage {
 
   changeImageInInterface(path) {
     this.img.src = path;
-    this.profileBtn.src = path;
+    if (this.profileBtn) {
+      this.profileBtn.src = path;
+    }
   }
 }

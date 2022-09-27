@@ -17,7 +17,7 @@
                 <div class="profile-menu-wrapper">
                     <button id="profile-btn" class="<?= $_SESSION['user_img'] != '' ? 'img' : 'profile icon white no-hover' ?>">
                         <?php if ($_SESSION['user_img'] != '') { ?>
-                            <img class="profile-img" src="<?= $_SESSION['user_img'] ?>" alt="" width="40">
+                            <img class="profile-img" src="<?= $_SESSION['user_img'] ?>" alt="Image of <?= $_SESSION['user_first_name'] ?>" width="40">
                         <?php }
                         ?>
                         <span><?= $_SESSION['user_first_name'] ?></span>
