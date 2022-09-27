@@ -4,12 +4,11 @@ export default class UploadImage {
     this.fileInput = this.el.querySelector("#image-input");
     this.uploadBtn = this.el.querySelector("[type=submit]");
     this.img = this.el.querySelector("img");
-
+    this.profileBtn = document.querySelector("#profile-btn img");
     this.init();
   }
 
   init() {
-    console.log(this.img);
     this.fileInput.addEventListener("input", (e) => {
       if (this.fileInput.value !== "") {
         this.uploadImage(e);
@@ -31,6 +30,11 @@ export default class UploadImage {
       return;
     }
     // Success
-    this.img.src = data.file_path;
+    this.changeImageInInterface(data.file_path);
+  }
+
+  changeImageInInterface(path) {
+    this.img.src = path;
+    this.profileBtn.src = path;
   }
 }
