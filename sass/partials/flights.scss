@@ -17,20 +17,76 @@
     background-color: $clr-main;
     color: $clr-black;
     border-radius: $br-sm;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .flight-left {
+      padding: $gutter-sm;
+    }
 
     .flight-main-info {
       display: flex;
       width: inherit;
-      padding: $gutter-xs;
 
-      .airline-logo {
-        height: fit-content;
-        max-width: 50px;
+      align-items: center;
+      gap: $gutter-sm;
+
+      .flight-details {
+        width: 215px;
+        max-width: 215px;
+        .airline-logo {
+          height: fit-content;
+          max-width: 50px;
+        }
+
+        .times {
+          font-family: $ff-display;
+          margin-bottom: $gutter-xxs;
+        }
+
+        .airports {
+          max-width: 170px;
+          font-family: $ff-light;
+          font-size: $fs-xs;
+          color: $clr-light-lila;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .flight-direct {
+        width: 80px;
+        max-width: 80px;
+        font-family: $ff-display;
+        font-size: $fs-sm;
+      }
+
+      .flight-duration {
+        font-family: $ff-display;
+        font-size: $fs-sm;
+      }
+    }
+
+    .flight-bottom {
+      margin-top: $gutter-sm;
+      .airline-name {
+        font-family: $ff-light;
+        font-size: $fs-xs;
+        color: $clr-light-lila;
       }
     }
 
     .flight-price-wrapper {
-      padding: $gutter-xs;
+      background-color: $clr-light-grey;
+      width: 150px;
+      max-width: 150px;
+      padding: $gutter-sm;
+
+      .airline-name,
+      .seat-type {
+        font-family: $ff-light;
+        font-size: $fs-xs;
+      }
     }
   }
 
