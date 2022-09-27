@@ -72,6 +72,7 @@ button {
   min-height: calc($height-input + 3rem);
   border-radius: calc($height-input + 3rem / 2);
   transition: transform $duration-fast ease-in-out;
+  text-transform: capitalize;
   &:hover {
     transform: scale(1.05);
   }
@@ -85,6 +86,7 @@ button {
   border: 1px solid $clr-main;
   border-radius: 5px;
   transition: background-color $duration-fast ease-in-out;
+  text-transform: capitalize;
   &:hover {
     background-color: $clr-main;
     color: $clr-dark-blue;

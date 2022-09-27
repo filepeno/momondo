@@ -14,7 +14,7 @@ require_once '../partials/top-header.php'
 ?>
 <div id="main-wrapper">
     <main>
-        <h1 class="section-title h2">Welcome! Find a flexible flight for your next trip.</h1>
+        <h1 class="section-title h2"><?= $dictionary["{$language}_flights_main_title"] ?></h1>
         <div id="search-flights" data-component="search-flights">
             <form id="search-form">
                 <div id="form-inputs-wrapper">
@@ -38,7 +38,7 @@ require_once '../partials/top-header.php'
                         </div>
                     </div>
                 </div>
-                <button id="search-btn" class=" gradient-btn">Search</button>
+                <button id="search-btn" class=" gradient-btn"><?= $dictionary["{$language}_search"] ?></button>
             </form>
 
         </div>

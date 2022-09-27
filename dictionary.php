@@ -66,6 +66,8 @@ $dictionary = [
 
     'en_flights_main_title' => 'Welcome! Find a flexible flight for your next trip.',
     'dk_flights_main_title' => 'Velkommen! Find en fleksibel flybillet til din næste rejse.',
+    'en_search' => 'search',
+    'dk_search' => 'søg',
     'en_recommended_title' => 'Recommended for you',
     'dk_recommended_title' => 'Anbefalet til dig',
     'en_trending_cities_title' => 'Trending cities',
@@ -78,5 +80,9 @@ $dictionary = [
     'dk_trending_countries_subtitle' => 'De mest søgte lande på momondo',
     'en_trending_cto' => 'Fly to',
     'dk_trending_cto' => 'Fly til',
+
+    //SIGN IN
+    'en_sign_in_main_title' => 'Sign in or create an account',
+    'dk_sign_in_main_title' => 'Log ind, eller opret en konto',
 
 ];

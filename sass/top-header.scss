@@ -36,6 +36,7 @@
   .header-link {
     color: $clr-main;
     transition: color $duration-mid ease-in-out;
+    text-transform: capitalize;
     &:hover {
       color: $clr-orange;
     }

@@ -7,11 +7,11 @@
             </div>
         </a>
         <div class="links">
-            <a class="header-link" href="/trips">Trips</a>
+            <a class="header-link" href="/trips?language=<?= $language ?>"><?= $dictionary["{$language}_trips"] ?></a>
             <?php
             if (!$_SESSION) {
             ?>
-                <a class="profile icon white" id="log-in-btn" href="/sign-in">Sign in</a>
+                <a class="profile icon white" id="log-in-btn" href="/sign-in?language=<?= $language ?>"><?= $dictionary["{$language}_sign_in"] ?></a>
             <?php } else {
             ?>
                 <div class="profile-menu-wrapper">

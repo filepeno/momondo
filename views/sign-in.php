@@ -22,7 +22,7 @@ require_once '../partials/top-header.php'
     <main>
         <section class="form-wrapper" data-component="sign-in">
             <div class="bg-img"></div>
-            <h1 class="section-title">Sign in or create an account</h1>
+            <h1 class="section-title"><?= $dictionary["{$language}_sign_in_main_title"] ?></h1>
             <!--<p>Track prices, organise travel plans and access member-only deals with your momondo account.</p>-->
 
             <!-- EMAIL-FORM-->
