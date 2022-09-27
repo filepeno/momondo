@@ -12,7 +12,7 @@ try {
     exit();
 }
 
-$page_title = 'Flights';
+$page_title = 'Admin';
 $page_id = 'admin';
 require_once '../partials/html-head.php';
 
