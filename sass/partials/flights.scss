@@ -5,6 +5,11 @@
   gap: $gutter-sm;
 }
 
+form.delete-flight-form {
+  width: 100%;
+  max-width: $max-width-md;
+}
+
 .flight-wrapper {
   width: 100%;
   max-width: $max-width-md;
