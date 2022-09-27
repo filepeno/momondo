@@ -39,9 +39,9 @@ require_once '../partials/top-header.php'
                             <div class="trip-details">
                                 <h3 class="trip-title h4">Berlin-trip</h3>
                                 <div class="from-to-wrapper">
-                                    <date class="from">20.2.2022</date>
+                                    <time class="from">20.2.2022</time>
                                     <span> - </span>
-                                    <date class="to">30.2.2022</date>
+                                    <time class="to">30.2.2022</time>
                                 </div>
                             </div>
                             <div class="thumbnails">
