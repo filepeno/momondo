@@ -36,6 +36,7 @@ function get_lang_href()
 
 
 $dictionary = [
+    //side-nav
     'en_sign_in' => 'sign in',
     'dk_sign_in' => 'log ind',
     'en_flights' => 'flights',
@@ -55,6 +56,7 @@ $dictionary = [
     'en_trips' => 'trips',
     'dk_trips' => 'rejser',
 
+    //user menu
     'en_your_trips' => 'Your trips',
     'dk_your_trips' => 'Dine rejser',
     'en_help' => 'Help',
@@ -66,6 +68,7 @@ $dictionary = [
     'en_sign_out' => 'Sign out',
     'dk_sign_out' => 'Log ud',
 
+    //Flight search / home
     'en_flights_main_title' => 'Welcome! Find a flexible flight for your next trip.',
     'dk_flights_main_title' => 'Velkommen! Find en fleksibel flybillet til din næste rejse.',
     'en_search' => 'search',
@@ -86,5 +89,12 @@ $dictionary = [
     //SIGN IN
     'en_sign_in_main_title' => 'Sign in or create an account',
     'dk_sign_in_main_title' => 'Log ind, eller opret en konto',
+
+    //trips
+    'en_upcoming_trips' => 'Upcoming trips',
+    'dk_upcoming_trips' => 'Kommende rejser',
+    'en_add_a_trip' => 'Add a trip',
+    'dk_add_a_trip' => 'Tilføj en rejse',
+
 
 ];

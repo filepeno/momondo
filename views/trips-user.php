@@ -22,12 +22,12 @@ require_once '../partials/top-header.php'
     <main>
 
         <header class="heading-wrapper">
-            <h1 class="h1">Trips</h1>
-            <button id="add-trip" class="purple-btn">Add a trip</button>
+            <h1 class="h1 capitalize"><?= $dictionary["{$language}_trips"] ?></h1>
+            <button id="add-trip" class="purple-btn"><?= $dictionary["{$language}_add_a_trip"] ?></button>
             <button id="toggle-map">Toggle map</button>
         </header>
         <section class="" id="upcoming-trips">
-            <h2 class="h3 section-title">Upcoming trips <span id="upcoming-trips-qty">(1)</span></h2>
+            <h2 class="h3 section-title"><?= $dictionary["{$language}_upcoming_trips"] ?> (2)</h2>
             <ul class="trips">
                 <li>
                     <div class="trip-wrapper">

@@ -24,10 +24,10 @@
                         <span class="arrow-down icon white no-hover"></span>
                     </button>
                     <div id="profile-menu">
-                        <a class="profile-menu-item" href="/trips"><?= $dictionary["{$language}_your_trips"] ?></a>
+                        <a class="profile-menu-item" href="/trips?language=<?= $language ?>"><?= $dictionary["{$language}_your_trips"] ?></a>
                         <a class="profile-menu-item" href=""><?= $dictionary["{$language}_help"] ?>/<?= $dictionary["{$language}_faq"] ?></a>
-                        <a class="profile-menu-item" href=""><?= $dictionary["{$language}_your_account"] ?></a>
-                        <a class="profile-menu-item" href="/admin">Admin</a>
+                        <a class="profile-menu-item" href="profile?language=<?= $language ?>"><?= $dictionary["{$language}_your_account"] ?></a>
+                        <a class="profile-menu-item" href="/admin?language=<?= $language ?>">Admin</a>
                         <a id="log-out-btn" href="/log-out"><?= $dictionary["{$language}_sign_out"] ?></a>
                     </div>
                 </div>
