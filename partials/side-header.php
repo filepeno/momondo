@@ -29,7 +29,7 @@
         </ul>
         <ul>
             <li>
-                <a class="side-nav-link notes icon lila <?= $current_uri == '/trips' ? 'active' : '' ?>" href="/trips"><span class="link-text">Trips</span></a>
+                <a class="side-nav-link notes icon lila <?= $current_uri == '/trips' || '/my-trips' ? 'active' : '' ?>" href="/trips"><span class="link-text">Trips</span></a>
             </li>
 
         </ul>
