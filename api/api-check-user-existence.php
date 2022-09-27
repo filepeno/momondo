@@ -22,8 +22,8 @@ function _check_user_existense($email)
 
             'user_email' => 'a@a.com',
             'user_password' => 'password',
-            'user_first_name' => 'Alex',
-            'user_last_name' => 'Abbot',
+            'user_first_name' => 'Santiago',
+            'user_last_name' => 'Superman',
             'user_img' => '/assets/img/profile-images/filip-xs.jfif'
         ]
     ];
