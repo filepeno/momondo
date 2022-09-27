@@ -29,7 +29,7 @@
         </ul>
         <ul>
             <li>
-                <a class="side-nav-link notes icon lila <?= $current_uri == '/trips' ||  $current_uri == '/my-trips' ? 'active' : '' ?>" href="/trips"><span class="link-text"><?= $dictionary["{$language}_trips"] ?></span></a>
+                <a class="side-nav-link notes icon lila <?= $current_uri == '/momondo-trips' ||  $current_uri == '/my-trips' ? 'active' : '' ?>" href="/trips"><span class="link-text"><?= $dictionary["{$language}_trips"] ?></span></a>
             </li>
 
         </ul>
