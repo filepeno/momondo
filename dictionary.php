@@ -96,5 +96,12 @@ $dictionary = [
     'en_add_a_trip' => 'Add a trip',
     'dk_add_a_trip' => 'Tilføj en rejse',
 
+    //user-page
+    'en_hi' => 'Hi',
+    'dk_hi' => 'Hej',
+    'en_home_airport' => 'Home airport',
+    'dk_home_airport' => 'Hjemmelufthavn',
+
+
 
 ];

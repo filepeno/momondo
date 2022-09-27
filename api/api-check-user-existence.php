@@ -8,7 +8,7 @@ function _check_user_existense($email)
             'user_password' => 'pw123',
             'user_first_name' => 'John',
             'user_last_name' => 'Doe',
-            'user_img' => ''
+            'user_img' => '/assets/img/profile-images/filip-xs.jfif'
         ],
         [
 
@@ -24,7 +24,7 @@ function _check_user_existense($email)
             'user_password' => 'password',
             'user_first_name' => 'Santiago',
             'user_last_name' => 'Superman',
-            'user_img' => '/assets/img/profile-images/filip-xs.jfif'
+            'user_img' => ''
         ]
     ];
 

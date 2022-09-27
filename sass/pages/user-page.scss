@@ -1,0 +1,43 @@
+@import "../variables";
+
+#user-dashboard {
+  #site-wrapper {
+    background-color: #220340;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+
+    .user-details ul {
+      margin-top: $gutter-lg;
+      display: flex;
+      gap: $gutter-xl;
+    }
+
+    .img-wrapper {
+      height: 100%;
+      overflow: hidden;
+      border-radius: 100%;
+
+      img[src="/assets/icons/profile.svg"] {
+        transform: scale(1.2) translateY(2px);
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+      }
+    }
+
+    .btn-wrapper {
+      position: relative;
+      .x-btn {
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        &:before {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

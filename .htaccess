@@ -8,12 +8,12 @@ RewriteRule ^index$                 /views/index.php [NC,L]
 RewriteRule ^flight-results$        /views/flight-results.php [NC,L]
 RewriteRule ^about-us$              /views/about-us.php [NC,L]
 RewriteRule ^contact-us$            /views/contact-us.php [NC,L]
-RewriteRule ^user-page$             /views/user-page.php [NC,L]
 RewriteRule ^your-trips$            /views/your-trips.php [NC,L]
 RewriteRule ^sign-in$               /views/sign-in.php [NC,L]
 RewriteRule ^momondo-trips$         /views/trips.php [NC,L]
 RewriteRule ^my-trips$              /views/trips-user.php [NC,L]
 RewriteRule ^admin$                 /views/admin.php [NC,L]
+RewriteRule ^profile$               /views/user-page.php [NC,L]
 
 #404
 ErrorDocument 404                   /views/404.php

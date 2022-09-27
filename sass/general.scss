@@ -20,11 +20,10 @@ body {
 
 #main-wrapper {
   //grid-area: 2 / 2 / 2 / 3;
-  padding: 0 $gutter-md;
+  padding: $gutter-lg $gutter-md 0 $gutter-md;
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  margin-top: $gutter-lg;
 }
 
 main {
