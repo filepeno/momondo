@@ -3,10 +3,13 @@ export default class UploadImage {
     this.el = element;
     this.fileInput = this.el.querySelector("#image-input");
     this.uploadBtn = this.el.querySelector("[type=submit]");
+    this.img = this.el.querySelector("img");
+
     this.init();
   }
 
   init() {
+    console.log(this.img);
     this.fileInput.addEventListener("input", (e) => {
       if (this.fileInput.value !== "") {
         this.uploadImage(e);
@@ -24,11 +27,10 @@ export default class UploadImage {
     });
     const data = await conn.json();
     if (!conn.ok) {
-      console.log("error");
       console.log(data);
       return;
     }
     // Success
-    console.log(data);
+    this.img.src = data.file_path;
   }
 }

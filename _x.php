@@ -110,8 +110,10 @@ function _validate_image()
       break;
   }
 
-  if (move_uploaded_file($_FILES['image']['tmp_name'], "{$_SERVER['DOCUMENT_ROOT']}{$target_dir}/{$random_image_name}")) {
-    _respond('image uploaded', 200);
+  $final_relative_path = "{$target_dir}/{$random_image_name}";
+
+  if (move_uploaded_file($_FILES['image']['tmp_name'], "{$_SERVER['DOCUMENT_ROOT']}{$final_relative_path}")) {
+    return $final_relative_path;
   }
 }
 

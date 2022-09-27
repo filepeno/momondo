@@ -2,4 +2,5 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/_x.php';
 
-_validate_image();
+$path = _validate_image();
+echo json_encode(['file_path' => $path]);

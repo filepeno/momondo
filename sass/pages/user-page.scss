@@ -20,9 +20,15 @@
       overflow: hidden;
       border-radius: 100%;
 
-      img[src="/assets/icons/profile.svg"] {
-        transform: scale(1.2) translateY(2px);
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+      img {
+        object-fit: cover;
+        height: 100%;
+        &[src="/assets/icons/profile.svg"] {
+          height: auto;
+          object-fit: none;
+          transform: scale(1.2) translateY(2px);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+        }
       }
     }
 
