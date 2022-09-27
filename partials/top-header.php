@@ -33,6 +33,6 @@
                 </div>
             <?php }
             ?>
-            <a href="">English</a>
+            <a class="language-btn" href=""></a>
         </div>
     </div>

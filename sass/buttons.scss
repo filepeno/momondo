@@ -4,6 +4,18 @@ button {
   cursor: pointer;
 }
 
+.language-btn {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url(/assets/img/flags/flag-uk.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &.dk {
+    background-image: url(/assets/img/flags/flag-dk.svg);
+  }
+}
+
 .gradient-btn {
   background: linear-gradient(135deg, $clr-hot-pink 0%, $clr-mid-purple 100%);
   color: $clr-main;
