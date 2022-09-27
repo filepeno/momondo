@@ -37,13 +37,16 @@ require_once '../partials/top-header.php'
                 </address>
 
             </div>
-            <div class="btn-wrapper">
-                <button class="change-img-btn edit">
-                    <div class="img-wrapper">
-                        <img src="<?= $_SESSION['user_img'] !== '' ? $_SESSION['user_img'] : '/assets/icons/profile.svg' ?>" alt="Image of <?= $_SESSION['user_first_name'] ?>" width="150">
-                    </div>
-                </button>
-                <button class="x-btn icon white x no-hover"></button>
+            <div class="wrapper">
+                <form enctype="multipart/form-data" data-component="upload-image">
+                    <label for="image-input" class="change-img-btn edit">
+                        <div class="img-wrapper">
+                            <img src="<?= $_SESSION['user_img'] !== '' ? $_SESSION['user_img'] : '/assets/icons/profile.svg' ?>" alt="Image of <?= $_SESSION['user_first_name'] ?>" width="150">
+                        </div>
+                    </label>
+                    <input style="display:none" type="file" id="image-input" name="image">
+                    <button type="button" class="x-btn icon white x no-hover"></button>
+                </form>
             </div>
 
         </header>
