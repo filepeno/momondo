@@ -1,7 +1,7 @@
 <div id="site-wrapper">
 
     <div id="top-header" data-component="top-header">
-        <a href="/" aria-label="Home">
+        <a href="/?language=<?= $language ?>" aria-label="Home">
             <div class="logo">
 
             </div>
@@ -33,6 +33,6 @@
                 </div>
             <?php }
             ?>
-            <a aria-label="Switch to <?= strtoupper($other_language) ?>" class="language-btn <?= $language == 'dk' ? 'dk' : '' ?>" href="<?= str_replace("language={$language}", "language={$other_language}", $_SERVER['REQUEST_URI']) ?>"></a>
+            <a aria-label="Switch to <?= strtoupper($other_language) ?>" class="language-btn <?= $language == 'dk' ? 'dk' : '' ?>" href="<?= $lang_href ?>"></a>
         </div>
     </div>
