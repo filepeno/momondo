@@ -31,7 +31,7 @@ require_once '../partials/top-header.php'
 ?>
 <div id="main-wrapper">
     <main>
-        <h1 class="h1 section-title">Flights</h1>
+        <!--<h1 class="h1 section-title">Admin</h1>-->
         <ul class="flights">
             <?php
             foreach ($flights as $flight) {
