@@ -33,6 +33,6 @@
                 </div>
             <?php }
             ?>
-            <a class="language-btn" href=""></a>
+            <a aria-label="Switch to <?= strtoupper($other_language) ?>" class="language-btn <?= $language == 'dk' ? 'dk' : '' ?>" href="<?= str_replace("language={$language}", "language={$other_language}", $_SERVER['REQUEST_URI']) ?>"></a>
         </div>
     </div>
