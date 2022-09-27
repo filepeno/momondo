@@ -84,10 +84,6 @@ require_once '../partials/top-header.php'
                 </form>
             <?php }
             ?>
-            <form data-component="delete-flight">
-                <button type="submit" aria-label="Delete flight" class="delete-flight-btn">🗑️</button>
-                <input style="display:none" type="number" name="flight_id" value="5">
-            </form>
         </ul>
     </main>
 </div>
