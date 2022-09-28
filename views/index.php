@@ -1,6 +1,5 @@
 <?php
 $page_title = 'Momondo';
-$page_href = '/';
 $page_id = 'home-page';
 require_once '../partials/html-head.php'
 ?>
@@ -44,15 +43,7 @@ require_once '../partials/top-header.php'
         </div>
 
         <div id="bottom-wrapper">
-            <div id="filter">
-                FILTER
-            </div>
-            <div id="price-diagram">
-                PRICE DIAGRAM
-            </div>
-            <div id="results">
-                RESULTS
-            </div>
+
         </div>
     </main>
 </div>
