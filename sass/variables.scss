@@ -116,3 +116,9 @@ $z-header: 9999;
   bottom: 0;
   right: 0;
 }
+
+@mixin text-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

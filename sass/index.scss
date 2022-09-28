@@ -7,6 +7,7 @@
 @import "fonts.scss";
 @import "icons.scss";
 
+@import "pages/home.scss";
 @import "pages/sign-in.scss";
 @import "pages/trips.scss";
 @import "pages/user-page.scss";
@@ -18,3 +19,4 @@
 
 @import "components/flights.scss";
 @import "components/search-flights.scss";
+@import "components/recent-searches.scss";

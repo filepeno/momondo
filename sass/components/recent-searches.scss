@@ -1,0 +1,33 @@
+@import "../variables";
+
+.recent-searches {
+  .item-list {
+    @include flex-row-start;
+    gap: $gutter-md;
+    flex-wrap: wrap;
+  }
+
+  .recent-search-link {
+    @include flex-row-start;
+    align-items: center;
+    gap: $gutter-sm;
+
+    img {
+      border-radius: $br-sm;
+    }
+
+    .flight-data {
+      text-align: left;
+
+      .destination {
+        font-size: $fs-md;
+        margin-bottom: $gutter-xxs;
+        max-width: 150px;
+        @include text-wrap;
+      }
+      .route {
+        font-size: $fs-xs;
+      }
+    }
+  }
+}
