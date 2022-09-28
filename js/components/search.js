@@ -61,12 +61,24 @@ export default class SearchFlights {
       //console.log(airport.city.toLowerCase().indexOf(input));
       const cityHtml = `<button class="suggestion-item" type="button">
                           <img class="city-img" src="assets/img/${airport.image}" alt="Image of ${airport.city}" width="100px">
-                          <div class="city-data-wrapper">
-                              <h2 class="city-name"><span>${airport.city ?? "City"}, <span>${airport.country ?? "Country"}<span></h2>
+                          <div class="city-data" data-airport-code="${airport.code}">
+                              <h2 class="city-country"><span class="city">${airport.city ?? "City"}</span>, ${airport.country ?? "Country"}</h2>
                               <p>${airport.name ?? "Airport"}</p>
                           </div>
                         </button>`;
       parent.insertAdjacentHTML("beforeEnd", cityHtml);
     });
+    const buttons = parent.querySelectorAll(".suggestion-item");
+    if (buttons.length > 0) {
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const city = btn.querySelector(".city").textContent;
+          const airportCode = btn.querySelector(".city-data").dataset.airportCode;
+          const input = btn.closest(".search-input-wrapper").querySelector(".location-input");
+          input.value = city;
+          this.hideAllSuggestions();
+        });
+      });
+    }
   }
 }
