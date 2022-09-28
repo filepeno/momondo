@@ -108,6 +108,10 @@ $dictionary = [
     'en_home_airport' => 'Home airport',
     'dk_home_airport' => 'Hjemmelufthavn',
 
+    //404
+    'en_404_title' => 'Sorry, this page does not exist',
+    'dk_404_title' => 'Beklager, denne side findes ikke',
+
 
 
 ];

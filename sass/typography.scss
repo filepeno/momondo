@@ -35,6 +35,12 @@ li {
   list-style: none;
 }
 
+.link-primary {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .section-title {
   margin-bottom: $gutter-sm;
 }

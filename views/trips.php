@@ -20,7 +20,7 @@ require_once '../partials/top-header.php'
 
 <div id="main-wrapper" class="">
     <main>
-        <h1 class="section-title"><?= $dictionary["{$language}_trips"] ?></h1>
+        <h1 class="section-title capitalize"><?= $dictionary["{$language}_trips"] ?></h1>
     </main>
 </div>
 
