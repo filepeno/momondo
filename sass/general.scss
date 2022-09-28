@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
 }
 
+#bottom-wrapper {
+  @include flex-column-left;
+  gap: $gutter-lg;
+}
+
 main {
   max-width: $max-width-lg;
   margin: 0 auto;

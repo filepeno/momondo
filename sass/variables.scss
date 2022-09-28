@@ -109,6 +109,12 @@ $z-header: 9999;
   align-items: center;
 }
 
+@mixin flex-column-left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
 @mixin absolute-cover {
   position: absolute;
   top: 0;

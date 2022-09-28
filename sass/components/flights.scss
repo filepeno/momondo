@@ -1,4 +1,4 @@
-//@import "../variables";
+@import "../variables";
 
 .flights {
   @include flex-column-center;
@@ -8,13 +8,13 @@
 form.delete-flight-form {
   width: 100%;
   max-width: $max-width-md;
+  display: flex;
+  gap: $gutter-xs;
 }
 
 .flight-wrapper {
   width: 100%;
   max-width: $max-width-md;
-  display: flex;
-  gap: $gutter-xs;
 
   .flight-content {
     display: flex;
