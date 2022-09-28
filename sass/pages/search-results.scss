@@ -1,0 +1,29 @@
+#search-results-page {
+  #bottom-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include mq-sm {
+      grid-template-columns: 1fr 700px;
+
+      #price-diagram {
+        grid-area: 1 / 1 / 2 / -1;
+      }
+    }
+  }
+
+  #price-diagram {
+    height: 10rem;
+    width: 100%;
+  }
+
+  #filter {
+    height: 2rem;
+    width: 100%;
+  }
+  #results {
+    height: 100vh;
+    width: 100%;
+  }
+}

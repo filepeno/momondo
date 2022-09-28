@@ -58,12 +58,12 @@ export default class SearchFlights {
     parent.innerHTML = "";
 
     data.forEach((airport) => {
-      console.log(airport.city.toLowerCase().indexOf(input));
-      const cityHtml = `<button class="city">
-                          <img class="city-img" src="assets/img/${airport.image}" alt="Image of city" width="100px">
+      //console.log(airport.city.toLowerCase().indexOf(input));
+      const cityHtml = `<button class="suggestion-item" type="button">
+                          <img class="city-img" src="assets/img/${airport.image}" alt="Image of ${airport.city}" width="100px">
                           <div class="city-data-wrapper">
-                              <h2 class="city-name"><span>${airport.city ?? "UPS..."}, <span>${airport.country ?? "UPS..."}<span></h2>
-                              <p>${airport.name ?? "ups.."}</p>
+                              <h2 class="city-name"><span>${airport.city ?? "City"}, <span>${airport.country ?? "Country"}<span></h2>
+                              <p>${airport.name ?? "Airport"}</p>
                           </div>
                         </button>`;
       parent.insertAdjacentHTML("beforeEnd", cityHtml);

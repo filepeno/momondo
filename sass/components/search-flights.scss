@@ -1,0 +1,79 @@
+@import "../variables";
+
+[data-component="search-flights"] {
+  width: 100%;
+
+  /*   background-color: $clr-dark-blue;
+  padding: $gutter-md $gutter-sm; */
+}
+
+#search-form {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+
+  #form-inputs-wrapper {
+    width: inherit;
+    display: flex;
+    background: $clr-light-blue;
+    padding: $gutter-xs;
+    border-radius: $br-sm;
+    height: max-content;
+
+    #from-to-wrapper {
+      display: flex;
+      gap: $gutter-xs;
+      position: relative;
+
+      .search-input-wrapper {
+        position: relative;
+
+        input {
+          padding-left: 40px;
+        }
+
+        &:before {
+          position: absolute;
+          width: 1.4rem;
+          left: 12px;
+          top: 29%;
+        }
+
+        .suggestions-wrapper {
+          display: none;
+          margin-top: $gutter-xs;
+          position: absolute;
+          z-index: 1;
+          width: 200%;
+          padding: $gutter-sm;
+          background-color: $clr-main;
+          border-radius: calc($br-sm * 2);
+          &.active {
+            display: block;
+          }
+
+          .suggestion-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            gap: 1rem;
+            color: $clr-dark-blue;
+
+            .city-data-wrapper {
+              text-align: left;
+              .city-img {
+                max-width: 50px;
+                border-radius: calc($br-sm * 2);
+              }
+
+              .city-name {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
