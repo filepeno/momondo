@@ -3,7 +3,9 @@
     <ul class="item-list">
         <li>
             <a class="recent-search-link" href="">
-                <img src="/assets/img/helsinki.png" alt="Image of Helsinki" width="60">
+                <div class="img-wrapper">
+                    <img src="/assets/img/helsinki.png" alt="Image of Helsinki" width="80">
+                </div>
                 <div class="flight-data">
                     <h3 class="destination">Helsinki (HEL), Finland</h3>
                     <p class="route">CPH - HEL, 26. okt.</p>
@@ -12,7 +14,10 @@
         </li>
         <li>
             <a class="recent-search-link" href="">
-                <img src="/assets/img/amsterdam.png" alt="Image of Amsterdam" width="60">
+                <div class="img-wrapper">
+                    <img src="/assets/img/amsterdam.png" alt="Image of Amsterdam" width="80">
+                </div>
+
                 <div class="flight-data">
                     <h3 class="destination">Amsterdam (AMS), Netherlands</h3>
                     <p class="route">CPH - AMS, 19. nov.</p>
@@ -21,7 +26,10 @@
         </li>
         <li>
             <a class="recent-search-link" href="">
-                <img src="/assets/img/london.png" alt="Image of London" width="60">
+                <div class="img-wrapper">
+                    <img src="/assets/img/london.png" alt="Image of London" width="80">
+                </div>
+
                 <div class="flight-data">
                     <h3 class="destination">London (LON), United Kingdom</h3>
                     <p class="route">CPH - LON, 22. dec.</p>

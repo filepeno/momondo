@@ -12,8 +12,18 @@
     align-items: center;
     gap: $gutter-sm;
 
-    img {
+    .img-wrapper {
+      width: 70px;
+      height: 70px;
       border-radius: $br-sm;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        max-width: initial;
+        height: 100%;
+        width: 100%;
+      }
     }
 
     .flight-data {
