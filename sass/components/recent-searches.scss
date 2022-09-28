@@ -15,14 +15,11 @@
     .img-wrapper {
       width: 70px;
       height: 70px;
-      border-radius: $br-sm;
+      border-radius: $br-md;
       overflow: hidden;
 
       img {
-        object-fit: cover;
-        max-width: initial;
-        height: 100%;
-        width: 100%;
+        @include img-cover;
       }
     }
 

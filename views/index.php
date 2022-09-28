@@ -24,8 +24,9 @@ require_once '../partials/top-header.php'
             <?php
             require_once '../components/recent-searches.php'
             ?>
+
             <?php
-            require_once '../components/flights.php'
+            require_once '../components/recommended.php'
             ?>
 
         </div>

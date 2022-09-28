@@ -45,6 +45,7 @@ $gutter-xl: 8rem;
 $gutter-xxl: 15rem;
 
 $br-sm: 4px;
+$br-md: 8px;
 $br-sm-rem: 0.2rem;
 
 //search
@@ -112,7 +113,7 @@ $z-header: 9999;
 @mixin flex-column-left {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
 }
 
 @mixin absolute-cover {
@@ -127,4 +128,11 @@ $z-header: 9999;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin img-cover {
+  object-fit: cover;
+  max-width: initial;
+  height: 100%;
+  width: 100%;
 }
