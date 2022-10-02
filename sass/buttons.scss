@@ -67,7 +67,10 @@ button {
   border-radius: $br-sm;
 }
 
-#search-btn {
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: calc($height-input + 3rem);
   min-height: calc($height-input + 3rem);
   border-radius: calc($height-input + 3rem / 2);
