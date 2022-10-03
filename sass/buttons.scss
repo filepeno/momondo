@@ -142,3 +142,15 @@ button {
     border-radius: 100%;
   }
 }
+
+.x-btn {
+  width: 20px;
+  height: 20px;
+  &:before {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.map-button {
+}

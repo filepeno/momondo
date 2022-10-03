@@ -76,6 +76,7 @@
 
       .trip-wrapper {
         position: relative;
+        overflow: hidden;
         background-color: $clr-main;
         color: $clr-black;
         width: 100%;
@@ -83,9 +84,15 @@
         border-radius: $br-sm;
 
         .remove-trip-btn {
-          position: absolute;
-          top: 0;
-          right: 0;
+          display: none;
+          @include mq-xs {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+            margin-right: 10px;
+          }
         }
 
         .img-wrapper {
@@ -134,10 +141,19 @@
             }
 
             .thumbnails {
-              display: flex;
               padding: $gutter-md;
               @include flex-row-start;
               gap: $gutter-sm;
+              & > * {
+                font-size: $fs-md;
+                @include flex-row-start;
+                align-items: center;
+                gap: $gutter-xs;
+                &:before {
+                  width: calc($fs-md + 0.5rem);
+                  height: calc($fs-md + 0.5rem);
+                }
+              }
             }
           }
         }

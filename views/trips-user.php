@@ -45,41 +45,17 @@ require_once '../partials/top-header.php'
                                 </div>
                             </div>
                             <div class="thumbnails">
-                                <div class="icon">1</div>
-                                <div class="icon">2</div>
-                                <div class="icon">3</div>
+                                <div class="icon heart">0</div>
+                                <div class="icon plane">0</div>
+                                <div class="icon car">3</div>
 
                             </div>
                         </div>
-                        <button class="remove-trip-btn">X</button>
+                        <button class="remove-trip-btn x-btn icon x"></button>
                     </div>
 
                 </li>
-                <li>
-                    <div class="trip-wrapper">
 
-                        <div class="img-wrapper">
-                            <img src="/assets/img/cities/hamburg-md.jpg" alt="">
-                        </div>
-                        <div class="trip-info">
-                            <div class="trip-details">
-                                <h3 class="trip-title h4">Berlin-trip</h3>
-                                <div class="from-to-wrapper">
-                                    <date class="from">20.2.2022</date>
-                                    <span> - </span>
-                                    <date class="to">30.2.2022</date>
-                                </div>
-                            </div>
-                            <div class="thumbnails">
-                                <div class="icon">1</div>
-                                <div class="icon">2</div>
-                                <div class="icon">3</div>
-
-                            </div>
-                        </div>
-                        <button class="remove-trip-btn">X</button>
-                    </div>
-                </li>
             </ul>
         </section>
     </main>
