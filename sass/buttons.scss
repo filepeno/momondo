@@ -152,5 +152,11 @@ button {
   }
 }
 
-.map-button {
+.toggle-map {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  &:before {
+    @include absolute-cover;
+  }
 }

@@ -24,7 +24,7 @@ require_once '../partials/top-header.php'
         <header class="heading-wrapper">
             <h1 class="h1 capitalize"><?= $dictionary["{$language}_trips"] ?></h1>
             <button id="add-trip" class="purple-btn"><?= $dictionary["{$language}_add_a_trip"] ?></button>
-            <button id="toggle-map">Toggle map</button>
+            <button aria-label="Toggle map" class="toggle-map icon map white no-hover"></button>
         </header>
         <section class="" id="upcoming-trips">
             <h2 class="h3 section-title"><?= $dictionary["{$language}_upcoming_trips"] ?> (2)</h2>
