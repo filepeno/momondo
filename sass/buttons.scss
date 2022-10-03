@@ -144,19 +144,25 @@ button {
 }
 
 .x-btn {
-  width: 20px;
-  height: 20px;
   &:before {
-    height: 100%;
-    width: 100%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
   }
 }
 
 .toggle-map {
   position: relative;
-  width: 30px;
-  height: 30px;
+  border-radius: $br-sm;
+
   &:before {
-    @include absolute-cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  }
+  &.active {
+    background-color: $clr-main;
   }
 }

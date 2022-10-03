@@ -7,6 +7,7 @@ import SignIn from "./js/components/sign-in.js";
 import TopHeader from "./js/components/top-header.js";
 import DeleteFlight from "./js/components/delete-flight.js";
 import UploadImage from "./js/components/upload-image.js";
+import TripsUser from "./js/components/trips-user.js";
 
 const components = [
   //{ Class: App, selectorName: "app" },
@@ -17,6 +18,7 @@ const components = [
   { Class: TopHeader, selectorName: "top-header" },
   { Class: DeleteFlight, selectorName: "delete-flight" },
   { Class: UploadImage, selectorName: "upload-image" },
+  { Class: TripsUser, selectorName: "trips-user" },
 ];
 
 class ComponentInstantiator {

@@ -7,17 +7,21 @@
     //margin: 0;
 
     &.map-active {
-      @include mq-xs {
-        padding-right: 0;
-        gap: $gutter-md;
+      #trips-map {
+        display: none;
+      }
+      /*       @include mq-md {
+        
 
         grid-template-columns: 500px 1fr;
 
         #trips-map {
           display: block;
         }
-      }
+      } */
       @include mq-md {
+        padding-right: 0;
+        gap: $gutter-md;
         grid-template-columns: 1fr 1fr;
 
         #trips-map {
@@ -90,8 +94,6 @@
             position: absolute;
             top: 0;
             right: 0;
-            margin-top: 10px;
-            margin-right: 10px;
           }
         }
 

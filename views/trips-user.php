@@ -18,7 +18,7 @@ require_once '../partials/side-header.php'
 require_once '../partials/top-header.php'
 ?>
 
-<div id="main-wrapper" class="">
+<div id="main-wrapper" class="" data-component="trips-user">
     <main>
 
         <header class="heading-wrapper">
