@@ -2,6 +2,7 @@ export default class SearchFlights {
   constructor(element) {
     this.el = element;
     this.inputs = this.el.querySelectorAll(".location-input");
+    this.searchBtn = this.el.querySelector(".search-btn");
     this.init();
   }
 
@@ -11,6 +12,7 @@ export default class SearchFlights {
       element.addEventListener("focus", (e) => this.getInput(e));
       //element.addEventListener("blur", (e) => this.hideSuggestions(e));
     });
+    this.searchBtn.addEventListener("click", () => this.getFlights());
   }
 
   async getInput(e) {
@@ -80,5 +82,12 @@ export default class SearchFlights {
         });
       });
     }
+  }
+
+  async getFlights() {
+    event.preventDefault();
+    const resp = await fetch("api/api-get-flights.php");
+    const data = await resp.json();
+    console.log(data);
   }
 }

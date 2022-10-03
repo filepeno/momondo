@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <a href="/flight-results" class="search-btn gradient-btn"><?= $dictionary["{$language}_search"] ?></a>
+        <button class="search-btn gradient-btn"><?= $dictionary["{$language}_search"] ?></button>
     </form>
 
 </div>
