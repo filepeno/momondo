@@ -47,7 +47,7 @@ require_once '../partials/top-header.php'
             </form>
 
             <!-- SIGN-UP-FORM-->
-            <h2 style="display:none" id="sign-up-heading" class="type-light">Create an account for <span class="emphasize">*email*<span></h2>
+            <p style="display:none" id="sign-up-heading" class="type-light">The email <span class="emphasize">*email*</span> does not have an account yet. Create an account by filling out the form below.</p>
             <form id="sign-up-form" class="inactive" onsubmit="return false" data-component="form-validation">
                 <input style="display:none" type="text" name="user_email">
                 <div class="input-wrapper">

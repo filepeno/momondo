@@ -85,9 +85,9 @@ export default class SignIn {
     this.signUpForm.classList.remove("inactive");
     const subHeading = this.el.querySelector("#sign-up-heading");
     subHeading.style.display = "block";
-    subHeading.querySelector(".emphasize").textContent = email;
+    subHeading.querySelector("span.emphasize").textContent = email;
     this.signUpForm.querySelector("[name=user_email]").value = email;
-    this.heading.textContent = "Create and account";
+    this.heading.textContent = "Create new account";
     this.signUpForm.querySelector("button[type=submit]").addEventListener("click", () => {
       if (this.checkValidity()) {
         this.signUp();
