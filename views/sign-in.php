@@ -28,8 +28,8 @@ require_once '../partials/top-header.php'
             <!-- EMAIL-FORM-->
             <form id="email-form" onsubmit="return false" data-component="form-validation">
                 <div class="input-wrapper">
-                    <label for="user_email">What is your email address?</label>
-                    <input class="sign-in-input" data-validate="email" type="text" name="user_email" placeholder="Please enter your email">
+                    <label for="user_email"><?= $dictionary["{$language}_email_input_label"] ?></label>
+                    <input class="sign-in-input" data-validate="email" type="text" name="user_email" placeholder="<?= $dictionary["{$language}_email_input_placeholder"] ?>">
                     <p class="validation-msg"></p>
                 </div>
                 <button class="continue-btn gradient-btn" type="submit">Continue</button>

@@ -95,6 +95,10 @@ $dictionary = [
     //SIGN IN
     'en_sign_in_main_title' => 'Sign in or create an account',
     'dk_sign_in_main_title' => 'Log ind, eller opret en konto',
+    'en_email_input_label' => 'What is your email address?',
+    'dk_email_input_label' => 'Hvad er din e-mail adresse?',
+    'en_email_input_placeholder' => 'Email',
+    'dk_email_input_placeholder' => 'E-mail',
 
     //trips
     'en_upcoming_trips' => 'Upcoming trips',
