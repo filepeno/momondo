@@ -116,9 +116,15 @@ button {
     }
   }
 
-  .profile-img {
+  .img-wrapper {
     width: $icon-size-md-rem;
+    height: $icon-size-md-rem;
     border-radius: calc($icon-size-md-rem / 2);
+    overflow: hidden;
+
+    .profile-img {
+      @include img-cover;
+    }
   }
 }
 
