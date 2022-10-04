@@ -30,7 +30,7 @@
         <li>
             <a class="recommended-link" href="">
                 <div class="img-wrapper">
-                    <img src="/assets/img/london.png" alt="Image of London" width="300">
+                    <img src="/assets/img/cities/london.png" alt="Image of London" width="300">
                 </div>
                 <div class="flight-data">
                     <h3 class="destination">London, United Kingdom</h3>

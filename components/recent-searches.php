@@ -4,7 +4,7 @@
         <li>
             <a class="recent-search-link" href="">
                 <div class="img-wrapper">
-                    <img src="/assets/img/helsinki.png" alt="Image of Helsinki" width="80">
+                    <img src="/assets/img/cities/helsinki.png" alt="Image of Helsinki" width="80">
                 </div>
                 <div class="flight-data">
                     <h3 class="destination">Helsinki (HEL), Finland</h3>
@@ -15,7 +15,7 @@
         <li>
             <a class="recent-search-link" href="">
                 <div class="img-wrapper">
-                    <img src="/assets/img/amsterdam.png" alt="Image of Amsterdam" width="80">
+                    <img src="/assets/img/cities/amsterdam.png" alt="Image of Amsterdam" width="80">
                 </div>
 
                 <div class="flight-data">
@@ -27,7 +27,7 @@
         <li>
             <a class="recent-search-link" href="">
                 <div class="img-wrapper">
-                    <img src="/assets/img/london.png" alt="Image of London" width="80">
+                    <img src="/assets/img/cities/london.png" alt="Image of London" width="80">
                 </div>
 
                 <div class="flight-data">

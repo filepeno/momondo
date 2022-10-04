@@ -101,6 +101,8 @@ $dictionary = [
     'dk_upcoming_trips' => 'Kommende rejser',
     'en_add_a_trip' => 'Add a trip',
     'dk_add_a_trip' => 'Tilføj en rejse',
+    'en_trip' => 'trip',
+    'dk_trip' => 'rejse',
 
     //user-page
     'en_hi' => 'Hi',

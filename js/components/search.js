@@ -60,7 +60,7 @@ export default class SearchFlights {
     data.forEach((airport) => {
       //console.log(airport.city.toLowerCase().indexOf(input));
       const cityHtml = `<button class="suggestion-item" type="button">
-                          <img class="city-img" src="assets/img/${airport.image}" alt="Image of ${airport.city}" width="100px">
+                          <img class="city-img" src="assets/img/cities/${airport.image}" alt="Image of ${airport.city}" width="100px">
                           <div class="city-data" data-airport-code="${airport.code}">
                               <h2 class="city-country"><span class="city">${airport.city ?? "City"}</span>, ${airport.country ?? "Country"}</h2>
                               <p>${airport.name ?? "Airport"}</p>
