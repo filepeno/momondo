@@ -18,7 +18,7 @@ export default class SearchFlights {
     const suggestionsWrapper = e.target.nextElementSibling;
     if (input.length > 0) {
       const data = await this.getCities(input);
-      if (data.length) {
+      if (data != undefined && data.length) {
         this.displayCities(data, suggestionsWrapper, input);
         this.displaySuggestions(suggestionsWrapper);
       } else {
@@ -45,13 +45,24 @@ export default class SearchFlights {
   }
 
   async getCities(input) {
-    const resp = await fetch("api/api-get-airports.php");
+/*     const resp = await fetch("api/aapi-get-airports.php");
     const data = await resp.json();
-    const filterByCities = data.filter((airport) => airport.city.toLowerCase().includes(input));
-    const filterByCountries = data.filter((airport) => airport.country.toLowerCase().includes(input));
-    const allMatches = filterByCities.concat(filterByCountries);
-    const uniqueAirports = [...new Set(allMatches)];
-    return uniqueAirports;
+    console.log(data) */
+    const cities = await fetch("./api/api-get-airports.php")
+    .then((resp) => resp.json())
+    .then((data) => {
+      return filterUniqueAirports(data);
+    })
+    .catch((error) => console.log(error))
+    
+    function filterUniqueAirports(data){
+      const filterByCities = data.filter((airport) => airport.city.toLowerCase().includes(input));
+      const filterByCountries = data.filter((airport) => airport.country.toLowerCase().includes(input));
+      const allMatches = filterByCities.concat(filterByCountries);
+      const uniqueAirports = [...new Set(allMatches)];
+      return uniqueAirports;
+    }
+    return cities;
   }
 
   displayCities(data, parent, input) {
