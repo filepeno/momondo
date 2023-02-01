@@ -2,6 +2,7 @@ export default class SearchFlights {
   constructor(element) {
     this.el = element;
     this.inputs = this.el.querySelectorAll(".location-input");
+    this.searchBtn = document.querySelector("#search-btn");
     this.init();
   }
 
@@ -17,7 +18,7 @@ export default class SearchFlights {
     const input = e.target.value.toLowerCase();
     const suggestionsWrapper = e.target.nextElementSibling;
     if (input.length > 0) {
-      const data = await this.getCities(input);
+      const data = await this.getAirports(input);
       if (data != undefined && data.length) {
         this.displayCities(data, suggestionsWrapper, input);
         this.displaySuggestions(suggestionsWrapper);
@@ -44,25 +45,14 @@ export default class SearchFlights {
     e.target.nextElementSibling.classList.remove("active");
   }
 
-  async getCities(input) {
-/*     const resp = await fetch("api/aapi-get-airports.php");
-    const data = await resp.json();
-    console.log(data) */
-    const cities = await fetch("./api/api-get-airports.php")
-    .then((resp) => resp.json())
-    .then((data) => {
-      return filterUniqueAirports(data);
-    })
-    .catch((error) => console.log(error))
-    
-    function filterUniqueAirports(data){
-      const filterByCities = data.filter((airport) => airport.city.toLowerCase().includes(input));
-      const filterByCountries = data.filter((airport) => airport.country.toLowerCase().includes(input));
-      const allMatches = filterByCities.concat(filterByCountries);
-      const uniqueAirports = [...new Set(allMatches)];
-      return uniqueAirports;
-    }
-    return cities;
+  async getAirports(input) {
+    const airports = await fetch(`./api/api-get-airports.php?input=${input}`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        return data;
+      })
+      .catch((error) => console.log(error));
+    return airports;
   }
 
   displayCities(data, parent, input) {
@@ -92,4 +82,6 @@ export default class SearchFlights {
       });
     }
   }
+
+  search() {}
 }

@@ -47,7 +47,8 @@
 try {
     $con = mysqli_connect("localhost", "root", "", "momondo");
     $response = array();
-    $sql = "SELECT * FROM airports";
+    $input = $_GET['input'] ?? '';
+    $sql = "SELECT * FROM airports WHERE country LIKE '%$input%' OR city LIKE '%$input%'";
     $result = mysqli_query($con, $sql);
     if ($result) {
         header("Content-Type: JSON");
